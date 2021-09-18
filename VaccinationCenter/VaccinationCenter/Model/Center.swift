@@ -25,3 +25,17 @@ struct Center: Decodable {
     let phoneNumber: String
 
 }
+
+// feat: CenterDetail 추가 및 DetailViewModel 구현 
+struct CenterDetail {
+    
+    var id: Int
+    var centerName: String
+    var facilityName: String
+    var phoneNumber: String
+    var updatedAt: String
+    var address: String
+    var lat: String
+    var lng: String
+    
+}

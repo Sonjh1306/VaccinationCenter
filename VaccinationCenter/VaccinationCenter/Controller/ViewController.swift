@@ -149,6 +149,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailViewController = DetailViewController()
+        guard let center = viewModel.center(indexPath: indexPath) else { return }
+        detailViewController.viewModel.configureDetail(center: center)
         self.navigationController?.pushViewController(detailViewController, animated: true)
     }
 }

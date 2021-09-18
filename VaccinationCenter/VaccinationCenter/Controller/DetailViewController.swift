@@ -2,6 +2,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    let viewModel = DetailViewModel()
     
     //MARK: - View
     var centerNameView: UIView = {
@@ -183,7 +184,7 @@ class DetailViewController: UIViewController {
         configureImageView()
         rightBarButtonItem()
         configureLabelConstraint()
-        
+        configureInformation()
     }
  
     override func viewWillAppear(_ animated: Bool) {
@@ -191,19 +192,25 @@ class DetailViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: animated)
+    func configureInformation() {
+        self.centerInfoLabel.text = viewModel.detailCenterName()
+        self.facilityInfoLabel.text = viewModel.detailFacilityName()
+        self.phoneNumberInfoLabel.text = viewModel.detailPhoneNumber()
+        self.updateAtInfoLabel.text = viewModel.detailUpdatedAt()
+        self.addressInfoLabel.text = viewModel.detailAddress()
     }
-    
+     
     func rightBarButtonItem() {
         let button = UIButton(type: .system)
         button.setTitle("지도", for: .normal)
-//        button.addTarget(self, action: #selector(touchedRightBarButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(touchedRightBarButton), for: .touchUpInside)
         let selectButton = UIBarButtonItem(customView: button)
         self.navigationItem.rightBarButtonItem = selectButton
     }
     
+    @objc func touchedRightBarButton() {
+        
+    }
     
     private func configureViewConstraint() {
         view.addSubview(centerNameView)

@@ -25,6 +25,7 @@
 		BD65FBD126F5ED4900298E20 /* CenterListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBD026F5ED4900298E20 /* CenterListUseCase.swift */; };
 		BD65FBD526F5F08B00298E20 /* CenterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBD426F5F08B00298E20 /* CenterListViewModel.swift */; };
 		BD65FBD726F630DE00298E20 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBD626F630DE00298E20 /* DetailViewController.swift */; };
+		BD65FBD926F6386800298E20 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBD826F6386800298E20 /* DetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		BD65FBD026F5ED4900298E20 /* CenterListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterListUseCase.swift; sourceTree = "<group>"; };
 		BD65FBD426F5F08B00298E20 /* CenterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterListViewModel.swift; sourceTree = "<group>"; };
 		BD65FBD626F630DE00298E20 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		BD65FBD826F6386800298E20 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		CB0454FEA769C82B8B149BB9 /* Pods-VaccinationCenterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccinationCenterTests.release.xcconfig"; path = "Target Support Files/Pods-VaccinationCenterTests/Pods-VaccinationCenterTests.release.xcconfig"; sourceTree = "<group>"; };
 		D966E867630976ADB61ED37D /* Pods_VaccinationCenter_VaccinationCenterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VaccinationCenter_VaccinationCenterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6F15043D0D4483AC20E1EBA /* Pods-VaccinationCenter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccinationCenter.release.xcconfig"; path = "Target Support Files/Pods-VaccinationCenter/Pods-VaccinationCenter.release.xcconfig"; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				BD65FBD426F5F08B00298E20 /* CenterListViewModel.swift */,
+				BD65FBD826F6386800298E20 /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 				BD65FB8E26F5A19D00298E20 /* AppDelegate.swift in Sources */,
 				BD65FBD726F630DE00298E20 /* DetailViewController.swift in Sources */,
 				BD65FBC826F5CA2500298E20 /* Center.swift in Sources */,
+				BD65FBD926F6386800298E20 /* DetailViewModel.swift in Sources */,
 				BD65FB9026F5A19D00298E20 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
