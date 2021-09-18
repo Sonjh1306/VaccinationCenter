@@ -52,17 +52,26 @@ class ViewController: UIViewController {
     
     //MARK: - fetch and bind
     func fetchCenters(perPage: String) {
-        self.viewModel.fetch(perPage: perPage).subscribe(onNext: { centers in
-            self.viewModel.configureCenters(centers)
-        }).disposed(by: disposebag)
+        self.viewModel.fetch(perPage: perPage).subscribe { [weak self] centers in
+            self?.viewModel.configureCenters(centers)
+        } onError: { [weak self] error in
+            let error = error.localizedDescription
+            self?.makeErrorAlert(error: error)
+        }.disposed(by: disposebag)
     }
  
     func subscribe()  {
-        self.viewModel.centersRelay().subscribe(onNext:{ centers in
-            self.centerTableView.reloadData()
+        self.viewModel.centersSubject().subscribe(onNext:{ [weak self] _ in
+            self?.centerTableView.reloadData()
         }).disposed(by: disposebag)
     }
     
+    func makeErrorAlert(error: String) {
+        let alert = UIAlertController(title: "네트워크 에러", message: "\(error)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
+ 
     //MARK: - CenterTableView 설정
     private func configureCenterTableView() {
         centerTableView.register(CenterTableViewCell.nib, forCellReuseIdentifier: CenterTableViewCell.identifier)

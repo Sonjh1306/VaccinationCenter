@@ -36,7 +36,8 @@ class CenterListViewModel {
         }
     }
     
-    func centersRelay() -> BehaviorSubject<[Center]> {
+    func centersSubject() -> BehaviorSubject<[Center]> {
         return self.centers
     }
+
 }
