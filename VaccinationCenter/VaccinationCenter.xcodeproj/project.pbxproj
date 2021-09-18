@@ -13,7 +13,6 @@
 		BD65FB8E26F5A19D00298E20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FB8D26F5A19D00298E20 /* AppDelegate.swift */; };
 		BD65FB9026F5A19D00298E20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FB8F26F5A19D00298E20 /* SceneDelegate.swift */; };
 		BD65FB9226F5A19D00298E20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FB9126F5A19D00298E20 /* ViewController.swift */; };
-		BD65FB9526F5A19D00298E20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD65FB9326F5A19D00298E20 /* Main.storyboard */; };
 		BD65FB9726F5A19E00298E20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD65FB9626F5A19E00298E20 /* Assets.xcassets */; };
 		BD65FB9A26F5A19E00298E20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD65FB9826F5A19E00298E20 /* LaunchScreen.storyboard */; };
 		BD65FBA526F5A19E00298E20 /* VaccinationCenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBA426F5A19E00298E20 /* VaccinationCenterTests.swift */; };
@@ -25,6 +24,7 @@
 		BD65FBCE26F5EA8500298E20 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBCD26F5EA8500298E20 /* NetworkManager.swift */; };
 		BD65FBD126F5ED4900298E20 /* CenterListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBD026F5ED4900298E20 /* CenterListUseCase.swift */; };
 		BD65FBD526F5F08B00298E20 /* CenterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBD426F5F08B00298E20 /* CenterListViewModel.swift */; };
+		BD65FBD726F630DE00298E20 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBD626F630DE00298E20 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +55,6 @@
 		BD65FB8D26F5A19D00298E20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD65FB8F26F5A19D00298E20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BD65FB9126F5A19D00298E20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BD65FB9426F5A19D00298E20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD65FB9626F5A19E00298E20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD65FB9926F5A19E00298E20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD65FB9B26F5A19E00298E20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,6 +71,7 @@
 		BD65FBCD26F5EA8500298E20 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		BD65FBD026F5ED4900298E20 /* CenterListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterListUseCase.swift; sourceTree = "<group>"; };
 		BD65FBD426F5F08B00298E20 /* CenterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterListViewModel.swift; sourceTree = "<group>"; };
+		BD65FBD626F630DE00298E20 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CB0454FEA769C82B8B149BB9 /* Pods-VaccinationCenterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccinationCenterTests.release.xcconfig"; path = "Target Support Files/Pods-VaccinationCenterTests/Pods-VaccinationCenterTests.release.xcconfig"; sourceTree = "<group>"; };
 		D966E867630976ADB61ED37D /* Pods_VaccinationCenter_VaccinationCenterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VaccinationCenter_VaccinationCenterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6F15043D0D4483AC20E1EBA /* Pods-VaccinationCenter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccinationCenter.release.xcconfig"; path = "Target Support Files/Pods-VaccinationCenter/Pods-VaccinationCenter.release.xcconfig"; sourceTree = "<group>"; };
@@ -148,7 +148,6 @@
 				BD65FBD226F5F03400298E20 /* UseCase */,
 				BD65FB8D26F5A19D00298E20 /* AppDelegate.swift */,
 				BD65FB8F26F5A19D00298E20 /* SceneDelegate.swift */,
-				BD65FB9326F5A19D00298E20 /* Main.storyboard */,
 				BD65FB9626F5A19E00298E20 /* Assets.xcassets */,
 				BD65FB9826F5A19E00298E20 /* LaunchScreen.storyboard */,
 				BD65FB9B26F5A19E00298E20 /* Info.plist */,
@@ -195,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				BD65FB9126F5A19D00298E20 /* ViewController.swift */,
+				BD65FBD626F630DE00298E20 /* DetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -348,7 +348,6 @@
 				BD65FBC626F5C7F300298E20 /* CenterTableViewCell.xib in Resources */,
 				BD65FB9A26F5A19E00298E20 /* LaunchScreen.storyboard in Resources */,
 				BD65FB9726F5A19E00298E20 /* Assets.xcassets in Resources */,
-				BD65FB9526F5A19D00298E20 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +482,7 @@
 				BD65FB9226F5A19D00298E20 /* ViewController.swift in Sources */,
 				BD65FBCE26F5EA8500298E20 /* NetworkManager.swift in Sources */,
 				BD65FB8E26F5A19D00298E20 /* AppDelegate.swift in Sources */,
+				BD65FBD726F630DE00298E20 /* DetailViewController.swift in Sources */,
 				BD65FBC826F5CA2500298E20 /* Center.swift in Sources */,
 				BD65FB9026F5A19D00298E20 /* SceneDelegate.swift in Sources */,
 			);
@@ -520,14 +520,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BD65FB9326F5A19D00298E20 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BD65FB9426F5A19D00298E20 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BD65FB9826F5A19E00298E20 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

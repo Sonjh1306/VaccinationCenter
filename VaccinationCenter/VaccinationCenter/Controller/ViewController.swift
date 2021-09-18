@@ -73,14 +73,14 @@ class ViewController: UIViewController {
     }
  
     //MARK: - CenterTableView 설정
-    private func configureCenterTableView() {
+    func configureCenterTableView() {
         centerTableView.register(CenterTableViewCell.nib, forCellReuseIdentifier: CenterTableViewCell.identifier)
         centerTableView.delegate = self
         centerTableView.dataSource = self
         configureTableViewInset()
     }
     
-    private func configureTableViewInset() {
+    func configureTableViewInset() {
         centerTableView.separatorStyle = .singleLine
         centerTableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
@@ -146,4 +146,25 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let detailViewController = self.storyboard?.instantiateViewController(identifier: "DetailViewController") as? DetailViewController else {
+            return
+        }
+
+        self.navigationController?.pushViewController(detailViewController, animated: true)
+    }
+}
+
+//MARK: - 스크롤 시 10개씩 추가적으로 데이터 받아오기
+extension ViewController {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let height = scrollView.frame.height
+        if offsetY > (contentHeight - height) {
+            if let count = self.viewModel.centersCount() {
+                self.fetchCenters(perPage: String(count + 10))
+            }
+        }
+    }
 }

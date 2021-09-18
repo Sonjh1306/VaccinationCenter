@@ -24,7 +24,7 @@
                             <constraint firstAttribute="width" constant="80" id="FLV-FO-6Qa"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" systemColor="systemGray3Color"/>
+                        <color key="textColor" systemColor="systemGray2Color"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="건물명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cL4-ZC-tHp">
@@ -34,7 +34,7 @@
                             <constraint firstAttribute="width" constant="80" id="r0x-Jc-5aF"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" systemColor="systemGray3Color"/>
+                        <color key="textColor" systemColor="systemGray2Color"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="업데이트 시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVY-86-NK5">
@@ -44,7 +44,7 @@
                             <constraint firstAttribute="width" constant="80" id="QR1-Ai-3zB"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" systemColor="systemGray3Color"/>
+                        <color key="textColor" systemColor="systemGray2Color"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zX4-VE-Anv">
@@ -90,7 +90,7 @@
                             <constraint firstAttribute="width" constant="80" id="hOu-hE-lmr"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" systemColor="systemGray3Color"/>
+                        <color key="textColor" systemColor="systemGray2Color"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -129,8 +129,8 @@
         </tableViewCell>
     </objects>
     <resources>
-        <systemColor name="systemGray3Color">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
