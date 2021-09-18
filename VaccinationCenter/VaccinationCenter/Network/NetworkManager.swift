@@ -9,16 +9,16 @@ class NetworkManager {
         self.endPoint = EndPoint()
     }
     
-    private func sendRequest(_ perPage: String, completion: @escaping ((Error?, [Center]?) -> Void)) {
+    func sendRequest<T: Decodable>(perPage: String, type: T.Type, completion: @escaping ((Error?, T?) -> Void)) {
         let url = endPoint.url(perPage: perPage)
         AF.request(url!, method: .get)
             .validate(statusCode: 200..<300)
-            .responseDecodable(of: CenterResponse.self) { response in
+            .responseDecodable(of: type) { response in
                 if let error = response.error {
-                    return completion(error, [])
+                    return completion(error, nil)
                 }
                 if let list = response.value {
-                    return completion(nil, list.data)
+                    return completion(nil, list)
                 }
 
             }
