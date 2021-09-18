@@ -1,0 +1,6 @@
+framework module Pods_VaccinationCenter {
+  umbrella header "Pods-VaccinationCenter-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F1FFF4F9B3042C3D1EF7D89 /* Pods_VaccinationCenterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C8291E2BCCD7E831E4C3E3 /* Pods_VaccinationCenterTests.framework */; };
+		84CF888EFAECEB7DF7566F83 /* Pods_VaccinationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 157094528D7FA37F952C03FC /* Pods_VaccinationCenter.framework */; };
+		8C09DF7C65F0949956435FC2 /* Pods_VaccinationCenter_VaccinationCenterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D966E867630976ADB61ED37D /* Pods_VaccinationCenter_VaccinationCenterUITests.framework */; };
 		BD65FB8E26F5A19D00298E20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FB8D26F5A19D00298E20 /* AppDelegate.swift */; };
 		BD65FB9026F5A19D00298E20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FB8F26F5A19D00298E20 /* SceneDelegate.swift */; };
 		BD65FB9226F5A19D00298E20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FB9126F5A19D00298E20 /* ViewController.swift */; };
@@ -35,6 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		157094528D7FA37F952C03FC /* Pods_VaccinationCenter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VaccinationCenter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		28D60412A1CAA4152DCAE3E3 /* Pods-VaccinationCenter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccinationCenter.debug.xcconfig"; path = "Target Support Files/Pods-VaccinationCenter/Pods-VaccinationCenter.debug.xcconfig"; sourceTree = "<group>"; };
+		63C8291E2BCCD7E831E4C3E3 /* Pods_VaccinationCenterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VaccinationCenterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A1D869AF106E400822BFE59 /* Pods-VaccinationCenter-VaccinationCenterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccinationCenter-VaccinationCenterUITests.release.xcconfig"; path = "Target Support Files/Pods-VaccinationCenter-VaccinationCenterUITests/Pods-VaccinationCenter-VaccinationCenterUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9686F9138D1DB1CFB32F6476 /* Pods-VaccinationCenter-VaccinationCenterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccinationCenter-VaccinationCenterUITests.debug.xcconfig"; path = "Target Support Files/Pods-VaccinationCenter-VaccinationCenterUITests/Pods-VaccinationCenter-VaccinationCenterUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BC46646E31C02C1D7A1D6A88 /* Pods-VaccinationCenterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccinationCenterTests.debug.xcconfig"; path = "Target Support Files/Pods-VaccinationCenterTests/Pods-VaccinationCenterTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BD65FB8A26F5A19D00298E20 /* VaccinationCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VaccinationCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD65FB8D26F5A19D00298E20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD65FB8F26F5A19D00298E20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +58,9 @@
 		BD65FBAB26F5A19E00298E20 /* VaccinationCenterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VaccinationCenterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD65FBAF26F5A19E00298E20 /* VaccinationCenterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinationCenterUITests.swift; sourceTree = "<group>"; };
 		BD65FBB126F5A19E00298E20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB0454FEA769C82B8B149BB9 /* Pods-VaccinationCenterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccinationCenterTests.release.xcconfig"; path = "Target Support Files/Pods-VaccinationCenterTests/Pods-VaccinationCenterTests.release.xcconfig"; sourceTree = "<group>"; };
+		D966E867630976ADB61ED37D /* Pods_VaccinationCenter_VaccinationCenterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VaccinationCenter_VaccinationCenterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6F15043D0D4483AC20E1EBA /* Pods-VaccinationCenter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccinationCenter.release.xcconfig"; path = "Target Support Files/Pods-VaccinationCenter/Pods-VaccinationCenter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84CF888EFAECEB7DF7566F83 /* Pods_VaccinationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F1FFF4F9B3042C3D1EF7D89 /* Pods_VaccinationCenterTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +84,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C09DF7C65F0949956435FC2 /* Pods_VaccinationCenter_VaccinationCenterUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2335F74E196E6AC7D2B9913C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				157094528D7FA37F952C03FC /* Pods_VaccinationCenter.framework */,
+				D966E867630976ADB61ED37D /* Pods_VaccinationCenter_VaccinationCenterUITests.framework */,
+				63C8291E2BCCD7E831E4C3E3 /* Pods_VaccinationCenterTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BD65FB8126F5A19D00298E20 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +108,8 @@
 				BD65FBA326F5A19E00298E20 /* VaccinationCenterTests */,
 				BD65FBAE26F5A19E00298E20 /* VaccinationCenterUITests */,
 				BD65FB8B26F5A19D00298E20 /* Products */,
+				DCE909F3E558C94F9AC4EC9D /* Pods */,
+				2335F74E196E6AC7D2B9913C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +155,20 @@
 			path = VaccinationCenterUITests;
 			sourceTree = "<group>";
 		};
+		DCE909F3E558C94F9AC4EC9D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				28D60412A1CAA4152DCAE3E3 /* Pods-VaccinationCenter.debug.xcconfig */,
+				F6F15043D0D4483AC20E1EBA /* Pods-VaccinationCenter.release.xcconfig */,
+				9686F9138D1DB1CFB32F6476 /* Pods-VaccinationCenter-VaccinationCenterUITests.debug.xcconfig */,
+				6A1D869AF106E400822BFE59 /* Pods-VaccinationCenter-VaccinationCenterUITests.release.xcconfig */,
+				BC46646E31C02C1D7A1D6A88 /* Pods-VaccinationCenterTests.debug.xcconfig */,
+				CB0454FEA769C82B8B149BB9 /* Pods-VaccinationCenterTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +176,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD65FBB426F5A19E00298E20 /* Build configuration list for PBXNativeTarget "VaccinationCenter" */;
 			buildPhases = (
+				78BB6C335DF51B5320302ADF /* [CP] Check Pods Manifest.lock */,
 				BD65FB8626F5A19D00298E20 /* Sources */,
 				BD65FB8726F5A19D00298E20 /* Frameworks */,
 				BD65FB8826F5A19D00298E20 /* Resources */,
+				848A49A8E145B37B1958DFB1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +195,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD65FBB726F5A19E00298E20 /* Build configuration list for PBXNativeTarget "VaccinationCenterTests" */;
 			buildPhases = (
+				DC2840866B60A39C7FE1B289 /* [CP] Check Pods Manifest.lock */,
 				BD65FB9C26F5A19E00298E20 /* Sources */,
 				BD65FB9D26F5A19E00298E20 /* Frameworks */,
 				BD65FB9E26F5A19E00298E20 /* Resources */,
@@ -170,9 +214,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD65FBBA26F5A19E00298E20 /* Build configuration list for PBXNativeTarget "VaccinationCenterUITests" */;
 			buildPhases = (
+				6DAA9AEFE8030D5F79E48F73 /* [CP] Check Pods Manifest.lock */,
 				BD65FBA726F5A19E00298E20 /* Sources */,
 				BD65FBA826F5A19E00298E20 /* Frameworks */,
 				BD65FBA926F5A19E00298E20 /* Resources */,
+				72F4F581DB71F9F096AF3C26 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -252,6 +298,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6DAA9AEFE8030D5F79E48F73 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VaccinationCenter-VaccinationCenterUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72F4F581DB71F9F096AF3C26 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VaccinationCenter-VaccinationCenterUITests/Pods-VaccinationCenter-VaccinationCenterUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VaccinationCenter-VaccinationCenterUITests/Pods-VaccinationCenter-VaccinationCenterUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VaccinationCenter-VaccinationCenterUITests/Pods-VaccinationCenter-VaccinationCenterUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78BB6C335DF51B5320302ADF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VaccinationCenter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		848A49A8E145B37B1958DFB1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VaccinationCenter/Pods-VaccinationCenter-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VaccinationCenter/Pods-VaccinationCenter-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VaccinationCenter/Pods-VaccinationCenter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC2840866B60A39C7FE1B289 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VaccinationCenterTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BD65FB8626F5A19D00298E20 /* Sources */ = {
@@ -433,6 +582,7 @@
 		};
 		BD65FBB526F5A19E00298E20 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28D60412A1CAA4152DCAE3E3 /* Pods-VaccinationCenter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -452,6 +602,7 @@
 		};
 		BD65FBB626F5A19E00298E20 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6F15043D0D4483AC20E1EBA /* Pods-VaccinationCenter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -471,6 +622,7 @@
 		};
 		BD65FBB826F5A19E00298E20 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC46646E31C02C1D7A1D6A88 /* Pods-VaccinationCenterTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -493,6 +645,7 @@
 		};
 		BD65FBB926F5A19E00298E20 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB0454FEA769C82B8B149BB9 /* Pods-VaccinationCenterTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +668,7 @@
 		};
 		BD65FBBB26F5A19E00298E20 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9686F9138D1DB1CFB32F6476 /* Pods-VaccinationCenter-VaccinationCenterUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -535,6 +689,7 @@
 		};
 		BD65FBBC26F5A19E00298E20 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A1D869AF106E400822BFE59 /* Pods-VaccinationCenter-VaccinationCenterUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
