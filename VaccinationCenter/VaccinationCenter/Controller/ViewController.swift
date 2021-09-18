@@ -48,6 +48,7 @@ class ViewController: UIViewController {
         configureButton()
         subscribe()
         fetchCenters(perPage: "10")
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     //MARK: - fetch and bind
@@ -147,10 +148,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let detailViewController = self.storyboard?.instantiateViewController(identifier: "DetailViewController") as? DetailViewController else {
-            return
-        }
-
+        let detailViewController = DetailViewController()
         self.navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
