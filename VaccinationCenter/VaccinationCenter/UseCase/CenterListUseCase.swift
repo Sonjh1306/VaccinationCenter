@@ -2,11 +2,11 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-protocol CenterListServiceProtocol {
+protocol CenterListUseCaseProtocol {
     func fetchCenterList(_ page: String) -> Observable<[Center]>
 }
 
-class CenterListService: CenterListServiceProtocol {
+class CenterListUseCase: CenterListUseCaseProtocol {
     
     var networkManager: NetworkManager
     

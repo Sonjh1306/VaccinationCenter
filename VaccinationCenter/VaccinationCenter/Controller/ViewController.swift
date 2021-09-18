@@ -6,6 +6,7 @@ import RxSwift
 class ViewController: UIViewController {
 
     private var disposebag = DisposeBag()
+    private let viewModel = CenterListViewModel()
     
     //MARK: - 헤더 뷰
     var headerView: UIView = {
@@ -45,6 +46,21 @@ class ViewController: UIViewController {
         configureCenterTableView()
         configureConstraint()
         configureButton()
+        subscribe()
+        fetchCenters(perPage: "10")
+    }
+    
+    //MARK: - fetch and bind
+    func fetchCenters(perPage: String) {
+        self.viewModel.fetch(perPage: perPage).subscribe(onNext: { centers in
+            self.viewModel.configureCenters(centers)
+        }).disposed(by: disposebag)
+    }
+ 
+    func subscribe()  {
+        self.viewModel.centersRelay().subscribe(onNext:{ centers in
+            self.centerTableView.reloadData()
+        }).disposed(by: disposebag)
     }
     
     //MARK: - CenterTableView 설정
@@ -105,15 +121,19 @@ class ViewController: UIViewController {
     }
 }
 
-extension UIViewController: UITableViewDelegate, UITableViewDataSource {
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let count = self.viewModel.centersCount() else { return 0 }
+        return count
     }
     
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CenterTableViewCell.identifier, for: indexPath) as? CenterTableViewCell else { return UITableViewCell() }
         
+        if let center = self.viewModel.center(indexPath: indexPath) {
+            cell.configureCell(center: center)
+        }
         return cell
     }
     
