@@ -21,6 +21,8 @@
 		BD65FBC526F5C7F300298E20 /* CenterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBC326F5C7F300298E20 /* CenterTableViewCell.swift */; };
 		BD65FBC626F5C7F300298E20 /* CenterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD65FBC426F5C7F300298E20 /* CenterTableViewCell.xib */; };
 		BD65FBC826F5CA2500298E20 /* Center.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBC726F5CA2500298E20 /* Center.swift */; };
+		BD65FBCC26F5E88C00298E20 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBCB26F5E88C00298E20 /* EndPoint.swift */; };
+		BD65FBCE26F5EA8500298E20 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBCD26F5EA8500298E20 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		BD65FBC326F5C7F300298E20 /* CenterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterTableViewCell.swift; sourceTree = "<group>"; };
 		BD65FBC426F5C7F300298E20 /* CenterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CenterTableViewCell.xib; sourceTree = "<group>"; };
 		BD65FBC726F5CA2500298E20 /* Center.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Center.swift; sourceTree = "<group>"; };
+		BD65FBCB26F5E88C00298E20 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		BD65FBCD26F5EA8500298E20 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CB0454FEA769C82B8B149BB9 /* Pods-VaccinationCenterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccinationCenterTests.release.xcconfig"; path = "Target Support Files/Pods-VaccinationCenterTests/Pods-VaccinationCenterTests.release.xcconfig"; sourceTree = "<group>"; };
 		D966E867630976ADB61ED37D /* Pods_VaccinationCenter_VaccinationCenterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VaccinationCenter_VaccinationCenterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6F15043D0D4483AC20E1EBA /* Pods-VaccinationCenter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccinationCenter.release.xcconfig"; path = "Target Support Files/Pods-VaccinationCenter/Pods-VaccinationCenter.release.xcconfig"; sourceTree = "<group>"; };
@@ -135,8 +139,9 @@
 				BD65FBBF26F5A34C00298E20 /* Controller */,
 				BD65FBBE26F5A34700298E20 /* Model */,
 				BD65FBBD26F5A34000298E20 /* View */,
-				BD65FB8D26F5A19D00298E20 /* AppDelegate.swift */,
+				BD65FBCF26F5EB0400298E20 /* Network */,
 				BD65FB8F26F5A19D00298E20 /* SceneDelegate.swift */,
+				BD65FB8D26F5A19D00298E20 /* AppDelegate.swift */,
 				BD65FB9326F5A19D00298E20 /* Main.storyboard */,
 				BD65FB9626F5A19E00298E20 /* Assets.xcassets */,
 				BD65FB9826F5A19E00298E20 /* LaunchScreen.storyboard */,
@@ -186,6 +191,15 @@
 				BD65FB9126F5A19D00298E20 /* ViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		BD65FBCF26F5EB0400298E20 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BD65FBCB26F5E88C00298E20 /* EndPoint.swift */,
+				BD65FBCD26F5EA8500298E20 /* NetworkManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		DCE909F3E558C94F9AC4EC9D /* Pods */ = {
@@ -440,8 +454,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD65FBCC26F5E88C00298E20 /* EndPoint.swift in Sources */,
 				BD65FBC526F5C7F300298E20 /* CenterTableViewCell.swift in Sources */,
 				BD65FB9226F5A19D00298E20 /* ViewController.swift in Sources */,
+				BD65FBCE26F5EA8500298E20 /* NetworkManager.swift in Sources */,
 				BD65FB8E26F5A19D00298E20 /* AppDelegate.swift in Sources */,
 				BD65FBC826F5CA2500298E20 /* Center.swift in Sources */,
 				BD65FB9026F5A19D00298E20 /* SceneDelegate.swift in Sources */,
