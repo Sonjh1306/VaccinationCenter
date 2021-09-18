@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,9 @@
 		BD65FB9A26F5A19E00298E20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD65FB9826F5A19E00298E20 /* LaunchScreen.storyboard */; };
 		BD65FBA526F5A19E00298E20 /* VaccinationCenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBA426F5A19E00298E20 /* VaccinationCenterTests.swift */; };
 		BD65FBB026F5A19E00298E20 /* VaccinationCenterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBAF26F5A19E00298E20 /* VaccinationCenterUITests.swift */; };
+		BD65FBC526F5C7F300298E20 /* CenterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBC326F5C7F300298E20 /* CenterTableViewCell.swift */; };
+		BD65FBC626F5C7F300298E20 /* CenterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD65FBC426F5C7F300298E20 /* CenterTableViewCell.xib */; };
+		BD65FBC826F5CA2500298E20 /* Center.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBC726F5CA2500298E20 /* Center.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,9 @@
 		BD65FBAB26F5A19E00298E20 /* VaccinationCenterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VaccinationCenterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD65FBAF26F5A19E00298E20 /* VaccinationCenterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinationCenterUITests.swift; sourceTree = "<group>"; };
 		BD65FBB126F5A19E00298E20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD65FBC326F5C7F300298E20 /* CenterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterTableViewCell.swift; sourceTree = "<group>"; };
+		BD65FBC426F5C7F300298E20 /* CenterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CenterTableViewCell.xib; sourceTree = "<group>"; };
+		BD65FBC726F5CA2500298E20 /* Center.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Center.swift; sourceTree = "<group>"; };
 		CB0454FEA769C82B8B149BB9 /* Pods-VaccinationCenterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccinationCenterTests.release.xcconfig"; path = "Target Support Files/Pods-VaccinationCenterTests/Pods-VaccinationCenterTests.release.xcconfig"; sourceTree = "<group>"; };
 		D966E867630976ADB61ED37D /* Pods_VaccinationCenter_VaccinationCenterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VaccinationCenter_VaccinationCenterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6F15043D0D4483AC20E1EBA /* Pods-VaccinationCenter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccinationCenter.release.xcconfig"; path = "Target Support Files/Pods-VaccinationCenter/Pods-VaccinationCenter.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,9 +132,11 @@
 		BD65FB8C26F5A19D00298E20 /* VaccinationCenter */ = {
 			isa = PBXGroup;
 			children = (
+				BD65FBBF26F5A34C00298E20 /* Controller */,
+				BD65FBBE26F5A34700298E20 /* Model */,
+				BD65FBBD26F5A34000298E20 /* View */,
 				BD65FB8D26F5A19D00298E20 /* AppDelegate.swift */,
 				BD65FB8F26F5A19D00298E20 /* SceneDelegate.swift */,
-				BD65FB9126F5A19D00298E20 /* ViewController.swift */,
 				BD65FB9326F5A19D00298E20 /* Main.storyboard */,
 				BD65FB9626F5A19E00298E20 /* Assets.xcassets */,
 				BD65FB9826F5A19E00298E20 /* LaunchScreen.storyboard */,
@@ -155,6 +163,31 @@
 			path = VaccinationCenterUITests;
 			sourceTree = "<group>";
 		};
+		BD65FBBD26F5A34000298E20 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD65FBC326F5C7F300298E20 /* CenterTableViewCell.swift */,
+				BD65FBC426F5C7F300298E20 /* CenterTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD65FBBE26F5A34700298E20 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BD65FBC726F5CA2500298E20 /* Center.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BD65FBBF26F5A34C00298E20 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BD65FB9126F5A19D00298E20 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		DCE909F3E558C94F9AC4EC9D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,7 +198,6 @@
 				BC46646E31C02C1D7A1D6A88 /* Pods-VaccinationCenterTests.debug.xcconfig */,
 				CB0454FEA769C82B8B149BB9 /* Pods-VaccinationCenterTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -277,6 +309,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD65FBC626F5C7F300298E20 /* CenterTableViewCell.xib in Resources */,
 				BD65FB9A26F5A19E00298E20 /* LaunchScreen.storyboard in Resources */,
 				BD65FB9726F5A19E00298E20 /* Assets.xcassets in Resources */,
 				BD65FB9526F5A19D00298E20 /* Main.storyboard in Resources */,
@@ -407,8 +440,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD65FBC526F5C7F300298E20 /* CenterTableViewCell.swift in Sources */,
 				BD65FB9226F5A19D00298E20 /* ViewController.swift in Sources */,
 				BD65FB8E26F5A19D00298E20 /* AppDelegate.swift in Sources */,
+				BD65FBC826F5CA2500298E20 /* Center.swift in Sources */,
 				BD65FB9026F5A19D00298E20 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
