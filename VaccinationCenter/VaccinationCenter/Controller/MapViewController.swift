@@ -2,7 +2,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController, CLLocationManagerDelegate {
+class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate{
 
     private var locationManager: CLLocationManager = CLLocationManager()
     private var currentLocation: CLLocation!
