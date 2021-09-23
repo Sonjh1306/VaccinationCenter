@@ -51,6 +51,11 @@ class ViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = true
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
     //MARK: - fetch and bind
     func fetchCenters(perPage: String) {
         self.viewModel.fetch(perPage: perPage).subscribe { [weak self] centers in
@@ -151,6 +156,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let detailViewController = DetailViewController()
         guard let center = viewModel.center(indexPath: indexPath) else { return }
         detailViewController.viewModel.configureDetail(center: center)
+        detailViewController.navigationItem.title = center.centerName
         self.navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
@@ -163,7 +169,9 @@ extension ViewController {
         let height = scrollView.frame.height
         if offsetY > (contentHeight - height) {
             if let count = self.viewModel.centersCount() {
-                self.fetchCenters(perPage: String(count + 10))
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+                    self.fetchCenters(perPage: String(count + 10))
+                }) 
             }
         }
     }

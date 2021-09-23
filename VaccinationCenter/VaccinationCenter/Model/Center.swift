@@ -26,7 +26,6 @@ struct Center: Decodable {
 
 }
 
-// feat: CenterDetail 추가 및 DetailViewModel 구현 
 struct CenterDetail {
     
     var id: Int
