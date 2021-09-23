@@ -209,7 +209,11 @@ class DetailViewController: UIViewController {
     }
     
     @objc func touchedRightBarButton() {
-        
+        let mapViewController = MapViewController()
+        mapViewController.mapViewModel.setInformation(name:self.viewModel.detailCenterName(),
+                                                      lat: self.viewModel.detailLat(),
+                                                      lng: self.viewModel.detailLng())
+        self.navigationController?.pushViewController(mapViewController, animated: true)
     }
     
     private func configureViewConstraint() {

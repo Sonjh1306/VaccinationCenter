@@ -28,6 +28,7 @@
 		BD65FBD926F6386800298E20 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBD826F6386800298E20 /* DetailViewModel.swift */; };
 		BD65FBDB26FC4F7300298E20 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBDA26FC4F7300298E20 /* MapViewModel.swift */; };
 		BD65FBDD26FC4FB900298E20 /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBDC26FC4FB900298E20 /* Marker.swift */; };
+		BD65FBE026FC507600298E20 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBDF26FC507600298E20 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		BD65FBD826F6386800298E20 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		BD65FBDA26FC4F7300298E20 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		BD65FBDC26FC4FB900298E20 /* Marker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
+		BD65FBDF26FC507600298E20 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CB0454FEA769C82B8B149BB9 /* Pods-VaccinationCenterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccinationCenterTests.release.xcconfig"; path = "Target Support Files/Pods-VaccinationCenterTests/Pods-VaccinationCenterTests.release.xcconfig"; sourceTree = "<group>"; };
 		D966E867630976ADB61ED37D /* Pods_VaccinationCenter_VaccinationCenterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VaccinationCenter_VaccinationCenterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6F15043D0D4483AC20E1EBA /* Pods-VaccinationCenter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccinationCenter.release.xcconfig"; path = "Target Support Files/Pods-VaccinationCenter/Pods-VaccinationCenter.release.xcconfig"; sourceTree = "<group>"; };
@@ -152,12 +154,11 @@
 				BD65FBBD26F5A34000298E20 /* View */,
 				BD65FBCF26F5EB0400298E20 /* Network */,
 				BD65FBD226F5F03400298E20 /* UseCase */,
-				BD65FB8D26F5A19D00298E20 /* AppDelegate.swift */,
-				BD65FB8F26F5A19D00298E20 /* SceneDelegate.swift */,
+				BD65FBDE26FC502700298E20 /* LifeCycle */,
+				BD65FBDC26FC4FB900298E20 /* Marker.swift */,
 				BD65FB9626F5A19E00298E20 /* Assets.xcassets */,
 				BD65FB9826F5A19E00298E20 /* LaunchScreen.storyboard */,
 				BD65FB9B26F5A19E00298E20 /* Info.plist */,
-				BD65FBDC26FC4FB900298E20 /* Marker.swift */,
 			);
 			path = VaccinationCenter;
 			sourceTree = "<group>";
@@ -202,6 +203,7 @@
 			children = (
 				BD65FB9126F5A19D00298E20 /* ViewController.swift */,
 				BD65FBD626F630DE00298E20 /* DetailViewController.swift */,
+				BD65FBDF26FC507600298E20 /* MapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -231,6 +233,15 @@
 				BD65FBDA26FC4F7300298E20 /* MapViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BD65FBDE26FC502700298E20 /* LifeCycle */ = {
+			isa = PBXGroup;
+			children = (
+				BD65FB8D26F5A19D00298E20 /* AppDelegate.swift */,
+				BD65FB8F26F5A19D00298E20 /* SceneDelegate.swift */,
+			);
+			path = LifeCycle;
 			sourceTree = "<group>";
 		};
 		DCE909F3E558C94F9AC4EC9D /* Pods */ = {
@@ -497,6 +508,7 @@
 				BD65FBD926F6386800298E20 /* DetailViewModel.swift in Sources */,
 				BD65FB9026F5A19D00298E20 /* SceneDelegate.swift in Sources */,
 				BD65FBDB26FC4F7300298E20 /* MapViewModel.swift in Sources */,
+				BD65FBE026FC507600298E20 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
