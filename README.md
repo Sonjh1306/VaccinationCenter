@@ -28,7 +28,7 @@
 
 
 ### App Architecture
-<img width="1022" alt="스크린샷 2021-09-23 오후 4 45 35" src="https://user-images.githubusercontent.com/73586326/134471367-31658d9c-5dba-48a9-ba02-9db4fe5d108d.png">
+<img width="1022" alt="스크린샷 2021-09-23 오후 5 16 12" src="https://user-images.githubusercontent.com/73586326/134474957-7a443543-b4c9-4dd2-a0c6-dd87831f85c7.png">
 
 
 ### App ScreenShot
