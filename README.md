@@ -38,4 +38,4 @@
 
 |<img src="https://user-images.githubusercontent.com/73586326/134472062-ee751524-8797-44d4-921a-c43effd92091.jpeg" width="300">|<img src="https://user-images.githubusercontent.com/73586326/134472104-5f44fb48-8e24-4364-824a-ee7b1cf26629.jpeg" width="300">|
 |:---:|:---:|
-|**현제 위치**|**예방접종센터 위치**|
+|**현재 위치**|**예방접종센터 위치**|
