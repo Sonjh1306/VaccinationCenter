@@ -21,7 +21,7 @@
 
 
 ### 구현 방향 및 목표
-1. 스토리보드 없이 코드로만 View 구현(SnapKit 라이브러시리 사용)
+1. 스토리보드 없이 코드로만 View 구현(SnapKit 라이브러리 사용)
 2. RxSwift를 사용하여 비동기 이벤트 처리
 3. MapKit을 활용한 위치 MarKer 표시
 4. TableView Pagination 구현(스크롤 시 10개씩 추가 데이터 받아오기)
