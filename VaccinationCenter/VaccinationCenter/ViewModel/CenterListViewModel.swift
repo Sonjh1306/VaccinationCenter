@@ -2,42 +2,46 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-class CenterListViewModel {
+protocol ViewModelType {
+    associatedtype Input
+    associatedtype Output
     
-    private let useCase: CenterListUseCaseProtocol
-    private var centers: BehaviorSubject<[Center]>
-    
-    init() {
-        self.useCase = CenterListUseCase()
-        self.centers = BehaviorSubject<[Center]>(value: [])
-    }
+    var input: Input { get }
+    var output: Output { get }
+    var disposeBag: DisposeBag { get set }
+}
 
-    func fetch(perPage: String) -> Observable<[Center]> {
-        return useCase.fetchCenterList(perPage)
+final class CenterListViewModel: ViewModelType {
+    
+    struct Input {
+        let onApear = PublishSubject<Void>()
+        let scrollDown = PublishSubject<Int>()
     }
     
-    func configureCenters(_ centers: [Center])  {
-        self.centers.onNext(centers)
+    struct Output {
+        let centers = PublishSubject<[Center]>()
     }
     
-    func centersCount() -> Int? {
-        do {
-            return try self.centers.value().count
-        } catch {
-           return nil
-        }
-    }
+    var input: Input = Input()
+    var output: Output = Output()
     
-    func center(indexPath: IndexPath) -> Center? {
-        do {
-            return try centers.value()[indexPath.row]
-        } catch {
-           return nil
-        }
-    }
+    var disposeBag: DisposeBag = DisposeBag()
     
-    func centersSubject() -> BehaviorSubject<[Center]> {
-        return self.centers
+    private let useCase: CenterListUseCase
+    
+    init(useCase: CenterListUseCase) {
+        self.useCase = useCase
+        
+        input.onApear
+            .flatMap { _ in self.useCase.fetchCenterList("10") }
+            .bind(to: output.centers)
+            .disposed(by: disposeBag)
+        
+        input.scrollDown
+            .map{ $0 }
+            .flatMap{ (perPage) in self.useCase.fetchCenterList(String(perPage))}
+            .bind(to: output.centers)
+            .disposed(by: disposeBag)
     }
 
 }
