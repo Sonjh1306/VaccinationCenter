@@ -10,9 +10,11 @@
 		0F1FFF4F9B3042C3D1EF7D89 /* Pods_VaccinationCenterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C8291E2BCCD7E831E4C3E3 /* Pods_VaccinationCenterTests.framework */; };
 		84CF888EFAECEB7DF7566F83 /* Pods_VaccinationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 157094528D7FA37F952C03FC /* Pods_VaccinationCenter.framework */; };
 		8C09DF7C65F0949956435FC2 /* Pods_VaccinationCenter_VaccinationCenterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D966E867630976ADB61ED37D /* Pods_VaccinationCenter_VaccinationCenterUITests.framework */; };
+		BD1766562989EAB100A26A8B /* Uitils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1766552989EAB100A26A8B /* Uitils.swift */; };
+		BD1766582989EEE200A26A8B /* CenterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1766572989EEE200A26A8B /* CenterListView.swift */; };
 		BD65FB8E26F5A19D00298E20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FB8D26F5A19D00298E20 /* AppDelegate.swift */; };
 		BD65FB9026F5A19D00298E20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FB8F26F5A19D00298E20 /* SceneDelegate.swift */; };
-		BD65FB9226F5A19D00298E20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FB9126F5A19D00298E20 /* ViewController.swift */; };
+		BD65FB9226F5A19D00298E20 /* CenterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FB9126F5A19D00298E20 /* CenterListViewController.swift */; };
 		BD65FB9726F5A19E00298E20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD65FB9626F5A19E00298E20 /* Assets.xcassets */; };
 		BD65FB9A26F5A19E00298E20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD65FB9826F5A19E00298E20 /* LaunchScreen.storyboard */; };
 		BD65FBA526F5A19E00298E20 /* VaccinationCenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBA426F5A19E00298E20 /* VaccinationCenterTests.swift */; };
@@ -20,8 +22,7 @@
 		BD65FBC526F5C7F300298E20 /* CenterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBC326F5C7F300298E20 /* CenterTableViewCell.swift */; };
 		BD65FBC626F5C7F300298E20 /* CenterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD65FBC426F5C7F300298E20 /* CenterTableViewCell.xib */; };
 		BD65FBC826F5CA2500298E20 /* Center.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBC726F5CA2500298E20 /* Center.swift */; };
-		BD65FBCC26F5E88C00298E20 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBCB26F5E88C00298E20 /* EndPoint.swift */; };
-		BD65FBCE26F5EA8500298E20 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBCD26F5EA8500298E20 /* NetworkManager.swift */; };
+		BD65FBCE26F5EA8500298E20 /* CenterListAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBCD26F5EA8500298E20 /* CenterListAPI.swift */; };
 		BD65FBD126F5ED4900298E20 /* CenterListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBD026F5ED4900298E20 /* CenterListUseCase.swift */; };
 		BD65FBD526F5F08B00298E20 /* CenterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBD426F5F08B00298E20 /* CenterListViewModel.swift */; };
 		BD65FBD726F630DE00298E20 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBD626F630DE00298E20 /* DetailViewController.swift */; };
@@ -55,10 +56,12 @@
 		6A1D869AF106E400822BFE59 /* Pods-VaccinationCenter-VaccinationCenterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccinationCenter-VaccinationCenterUITests.release.xcconfig"; path = "Target Support Files/Pods-VaccinationCenter-VaccinationCenterUITests/Pods-VaccinationCenter-VaccinationCenterUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9686F9138D1DB1CFB32F6476 /* Pods-VaccinationCenter-VaccinationCenterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccinationCenter-VaccinationCenterUITests.debug.xcconfig"; path = "Target Support Files/Pods-VaccinationCenter-VaccinationCenterUITests/Pods-VaccinationCenter-VaccinationCenterUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BC46646E31C02C1D7A1D6A88 /* Pods-VaccinationCenterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccinationCenterTests.debug.xcconfig"; path = "Target Support Files/Pods-VaccinationCenterTests/Pods-VaccinationCenterTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BD1766552989EAB100A26A8B /* Uitils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uitils.swift; sourceTree = "<group>"; };
+		BD1766572989EEE200A26A8B /* CenterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterListView.swift; sourceTree = "<group>"; };
 		BD65FB8A26F5A19D00298E20 /* VaccinationCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VaccinationCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD65FB8D26F5A19D00298E20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD65FB8F26F5A19D00298E20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BD65FB9126F5A19D00298E20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BD65FB9126F5A19D00298E20 /* CenterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterListViewController.swift; sourceTree = "<group>"; };
 		BD65FB9626F5A19E00298E20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD65FB9926F5A19E00298E20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD65FB9B26F5A19E00298E20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,8 +74,7 @@
 		BD65FBC326F5C7F300298E20 /* CenterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterTableViewCell.swift; sourceTree = "<group>"; };
 		BD65FBC426F5C7F300298E20 /* CenterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CenterTableViewCell.xib; sourceTree = "<group>"; };
 		BD65FBC726F5CA2500298E20 /* Center.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Center.swift; sourceTree = "<group>"; };
-		BD65FBCB26F5E88C00298E20 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
-		BD65FBCD26F5EA8500298E20 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		BD65FBCD26F5EA8500298E20 /* CenterListAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterListAPI.swift; sourceTree = "<group>"; };
 		BD65FBD026F5ED4900298E20 /* CenterListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterListUseCase.swift; sourceTree = "<group>"; };
 		BD65FBD426F5F08B00298E20 /* CenterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterListViewModel.swift; sourceTree = "<group>"; };
 		BD65FBD626F630DE00298E20 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +125,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BD1766522989E95F00A26A8B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BD1766552989EAB100A26A8B /* Uitils.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BD1766592989F3DE00A26A8B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BD65FBC326F5C7F300298E20 /* CenterTableViewCell.swift */,
+				BD65FBC426F5C7F300298E20 /* CenterTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		BD65FB8126F5A19D00298E20 = {
 			isa = PBXGroup;
 			children = (
@@ -148,8 +167,9 @@
 		BD65FB8C26F5A19D00298E20 /* VaccinationCenter */ = {
 			isa = PBXGroup;
 			children = (
-				BD65FBD326F5F07D00298E20 /* ViewModel */,
+				BD1766522989E95F00A26A8B /* Common */,
 				BD65FBBF26F5A34C00298E20 /* Controller */,
+				BD65FBD326F5F07D00298E20 /* ViewModel */,
 				BD65FBBE26F5A34700298E20 /* Model */,
 				BD65FBBD26F5A34000298E20 /* View */,
 				BD65FBCF26F5EB0400298E20 /* Network */,
@@ -184,8 +204,8 @@
 		BD65FBBD26F5A34000298E20 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BD65FBC326F5C7F300298E20 /* CenterTableViewCell.swift */,
-				BD65FBC426F5C7F300298E20 /* CenterTableViewCell.xib */,
+				BD1766572989EEE200A26A8B /* CenterListView.swift */,
+				BD1766592989F3DE00A26A8B /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -201,7 +221,7 @@
 		BD65FBBF26F5A34C00298E20 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BD65FB9126F5A19D00298E20 /* ViewController.swift */,
+				BD65FB9126F5A19D00298E20 /* CenterListViewController.swift */,
 				BD65FBD626F630DE00298E20 /* DetailViewController.swift */,
 				BD65FBDF26FC507600298E20 /* MapViewController.swift */,
 			);
@@ -211,8 +231,7 @@
 		BD65FBCF26F5EB0400298E20 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				BD65FBCB26F5E88C00298E20 /* EndPoint.swift */,
-				BD65FBCD26F5EA8500298E20 /* NetworkManager.swift */,
+				BD65FBCD26F5EA8500298E20 /* CenterListAPI.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -497,12 +516,13 @@
 			files = (
 				BD65FBD126F5ED4900298E20 /* CenterListUseCase.swift in Sources */,
 				BD65FBD526F5F08B00298E20 /* CenterListViewModel.swift in Sources */,
-				BD65FBCC26F5E88C00298E20 /* EndPoint.swift in Sources */,
 				BD65FBC526F5C7F300298E20 /* CenterTableViewCell.swift in Sources */,
-				BD65FB9226F5A19D00298E20 /* ViewController.swift in Sources */,
-				BD65FBCE26F5EA8500298E20 /* NetworkManager.swift in Sources */,
+				BD65FB9226F5A19D00298E20 /* CenterListViewController.swift in Sources */,
+				BD65FBCE26F5EA8500298E20 /* CenterListAPI.swift in Sources */,
 				BD65FB8E26F5A19D00298E20 /* AppDelegate.swift in Sources */,
+				BD1766582989EEE200A26A8B /* CenterListView.swift in Sources */,
 				BD65FBD726F630DE00298E20 /* DetailViewController.swift in Sources */,
+				BD1766562989EAB100A26A8B /* Uitils.swift in Sources */,
 				BD65FBC826F5CA2500298E20 /* Center.swift in Sources */,
 				BD65FBDD26FC4FB900298E20 /* Marker.swift in Sources */,
 				BD65FBD926F6386800298E20 /* DetailViewModel.swift in Sources */,
@@ -678,7 +698,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8KRV7X8GQ6;
+				DEVELOPMENT_TEAM = 99XDN4TU2D;
 				INFOPLIST_FILE = VaccinationCenter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -698,7 +718,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8KRV7X8GQ6;
+				DEVELOPMENT_TEAM = 99XDN4TU2D;
 				INFOPLIST_FILE = VaccinationCenter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

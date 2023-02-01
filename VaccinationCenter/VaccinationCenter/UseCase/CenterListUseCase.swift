@@ -1,27 +1,29 @@
 import Foundation
 import RxCocoa
 import RxSwift
+import Moya
 
-protocol CenterListUseCaseProtocol {
-    func fetchCenterList(_ page: String) -> Observable<[Center]>
-}
-
-class CenterListUseCase: CenterListUseCaseProtocol {
+final class CenterListUseCase {
     
-    var networkManager: NetworkManager
+    let provider: MoyaProvider<CenterListAPI>
     
-    init() {
-        self.networkManager = NetworkManager()
+    init(provider: MoyaProvider<CenterListAPI>) {
+        self.provider = provider
     }
-   
+    
     func fetchCenterList(_ perPage: String) -> Observable<[Center]> {
         return Observable.create { (observer) -> Disposable in
-            self.networkManager.sendRequest(perPage: perPage, type: CenterResponse.self) { (error, centerList) in
-                if let error = error {
+            self.provider.request(.getCenterList(perPage)) { result in
+                switch result {
+                case .success(let response):
+                    do {
+                        let decodingData = try response.map(CenterResponse.self).data
+                        observer.onNext(decodingData)
+                    } catch {
+                        observer.onError(error)
+                    }
+                case .failure(let error):
                     observer.onError(error)
-                }
-                if let centerList = centerList?.data {
-                    observer.onNext(centerList)
                 }
                 observer.onCompleted()
             }
