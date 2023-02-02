@@ -1,6 +1,6 @@
 import Foundation
 
-class DetailViewModel {
+class CenterDetailViewModel {
     
     private var detail: CenterDetail?
     

@@ -2,11 +2,11 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate{
+class CenterLocationViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate{
 
     private var locationManager: CLLocationManager = CLLocationManager()
     private var currentLocation: CLLocation!
-    var mapViewModel = MapViewModel()
+    var mapViewModel = CenterLocationViewModel()
     
     var mapView = MKMapView()
     

@@ -1,7 +1,7 @@
 import Foundation
 import MapKit
 
-class MapViewModel {
+class CenterLocationViewModel {
     
     private var name: String
     private var lat: String
