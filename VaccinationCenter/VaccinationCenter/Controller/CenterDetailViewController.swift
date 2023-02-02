@@ -1,16 +1,16 @@
 import UIKit
+import RxSwift
 
 class CenterDetailViewController: UIViewController {
     
     let viewModel = CenterDetailViewModel()
-    private var centerDetailView = CenterDetailView()
-   
+    private lazy var centerDetailView = CenterDetailView()
+    private var disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .systemGray6
+        self.view.backgroundColor = .systemGray
         rightBarButtonItem()
-        configureInformation()
         configureConstraints()
     }
  
@@ -19,19 +19,23 @@ class CenterDetailViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
-    func configureInformation() {
-        let centerName = viewModel.detailCenterName()
-        let facilityName = viewModel.detailFacilityName()
-        let phoneNumber = viewModel.detailPhoneNumber()
-        let updateTime = viewModel.detailUpdatedAt()
-        let detailAddress = viewModel.detailAddress()
-        
-        self.centerDetailView = CenterDetailView(centerContent: centerName,
-                                                 facilityContent: facilityName,
-                                                 phoneContent: phoneNumber,
-                                                 updateAtContent: updateTime,
-                                                 addressContent: detailAddress)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        bind()
     }
+    
+    func bind() {
+        // Output -> Update
+        viewModel.output.centerDetailData
+            .bind { [weak self] (detailData) in
+                self?.centerDetailView.configureData(center: detailData.centerName,
+                                                     facility: detailData.facilityName,
+                                                     phone: detailData.phoneNumber,
+                                                     update: detailData.updatedAt,
+                                                     address: detailData.address)
+            }.disposed(by: disposeBag)
+    }
+
      
     func rightBarButtonItem() {
         let button = UIButton(type: .system)
@@ -43,9 +47,6 @@ class CenterDetailViewController: UIViewController {
     
     @objc func touchedRightBarButton() {
         let mapViewController = CenterLocationViewController()
-        mapViewController.mapViewModel.setInformation(name:self.viewModel.detailCenterName(),
-                                                      lat: self.viewModel.detailLat(),
-                                                      lng: self.viewModel.detailLng())
         self.navigationController?.pushViewController(mapViewController, animated: true)
     }
     

@@ -28,7 +28,6 @@ struct Center: Decodable {
 
 struct CenterDetail {
     
-    var id: Int
     var centerName: String
     var facilityName: String
     var phoneNumber: String
@@ -36,5 +35,5 @@ struct CenterDetail {
     var address: String
     var lat: String
     var lng: String
-    
+
 }

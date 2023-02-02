@@ -64,8 +64,6 @@ final class CenterListView: UIView {
 
         setAddsubviews()
         
-        let width = UIScreen.main.bounds.size.width
-        
         headerView.snp.makeConstraints {
             $0.top.leading.trailing.equalToSuperview()
             $0.height.equalTo(30)
