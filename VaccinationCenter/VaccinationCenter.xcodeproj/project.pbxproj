@@ -25,11 +25,13 @@
 		BD65FBCE26F5EA8500298E20 /* CenterListAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBCD26F5EA8500298E20 /* CenterListAPI.swift */; };
 		BD65FBD126F5ED4900298E20 /* CenterListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBD026F5ED4900298E20 /* CenterListUseCase.swift */; };
 		BD65FBD526F5F08B00298E20 /* CenterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBD426F5F08B00298E20 /* CenterListViewModel.swift */; };
-		BD65FBD726F630DE00298E20 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBD626F630DE00298E20 /* DetailViewController.swift */; };
-		BD65FBD926F6386800298E20 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBD826F6386800298E20 /* DetailViewModel.swift */; };
-		BD65FBDB26FC4F7300298E20 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBDA26FC4F7300298E20 /* MapViewModel.swift */; };
+		BD65FBD726F630DE00298E20 /* CenterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBD626F630DE00298E20 /* CenterDetailViewController.swift */; };
+		BD65FBD926F6386800298E20 /* CenterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBD826F6386800298E20 /* CenterDetailViewModel.swift */; };
+		BD65FBDB26FC4F7300298E20 /* CenterLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBDA26FC4F7300298E20 /* CenterLocationViewModel.swift */; };
 		BD65FBDD26FC4FB900298E20 /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBDC26FC4FB900298E20 /* Marker.swift */; };
-		BD65FBE026FC507600298E20 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBDF26FC507600298E20 /* MapViewController.swift */; };
+		BD65FBE026FC507600298E20 /* CenterLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBDF26FC507600298E20 /* CenterLocationViewController.swift */; };
+		BDBF3FC6298B364B009C4C29 /* CenterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF3FC5298B364B009C4C29 /* CenterDetailView.swift */; };
+		BDBF3FC8298B37F2009C4C29 /* CommonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF3FC7298B37F2009C4C29 /* CommonDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,11 +79,13 @@
 		BD65FBCD26F5EA8500298E20 /* CenterListAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterListAPI.swift; sourceTree = "<group>"; };
 		BD65FBD026F5ED4900298E20 /* CenterListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterListUseCase.swift; sourceTree = "<group>"; };
 		BD65FBD426F5F08B00298E20 /* CenterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterListViewModel.swift; sourceTree = "<group>"; };
-		BD65FBD626F630DE00298E20 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		BD65FBD826F6386800298E20 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
-		BD65FBDA26FC4F7300298E20 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		BD65FBD626F630DE00298E20 /* CenterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterDetailViewController.swift; sourceTree = "<group>"; };
+		BD65FBD826F6386800298E20 /* CenterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterDetailViewModel.swift; sourceTree = "<group>"; };
+		BD65FBDA26FC4F7300298E20 /* CenterLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterLocationViewModel.swift; sourceTree = "<group>"; };
 		BD65FBDC26FC4FB900298E20 /* Marker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
-		BD65FBDF26FC507600298E20 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		BD65FBDF26FC507600298E20 /* CenterLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterLocationViewController.swift; sourceTree = "<group>"; };
+		BDBF3FC5298B364B009C4C29 /* CenterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterDetailView.swift; sourceTree = "<group>"; };
+		BDBF3FC7298B37F2009C4C29 /* CommonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonDetailView.swift; sourceTree = "<group>"; };
 		CB0454FEA769C82B8B149BB9 /* Pods-VaccinationCenterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccinationCenterTests.release.xcconfig"; path = "Target Support Files/Pods-VaccinationCenterTests/Pods-VaccinationCenterTests.release.xcconfig"; sourceTree = "<group>"; };
 		D966E867630976ADB61ED37D /* Pods_VaccinationCenter_VaccinationCenterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VaccinationCenter_VaccinationCenterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6F15043D0D4483AC20E1EBA /* Pods-VaccinationCenter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccinationCenter.release.xcconfig"; path = "Target Support Files/Pods-VaccinationCenter/Pods-VaccinationCenter.release.xcconfig"; sourceTree = "<group>"; };
@@ -167,7 +171,6 @@
 		BD65FB8C26F5A19D00298E20 /* VaccinationCenter */ = {
 			isa = PBXGroup;
 			children = (
-				BD1766522989E95F00A26A8B /* Common */,
 				BD65FBBF26F5A34C00298E20 /* Controller */,
 				BD65FBD326F5F07D00298E20 /* ViewModel */,
 				BD65FBBE26F5A34700298E20 /* Model */,
@@ -175,7 +178,7 @@
 				BD65FBCF26F5EB0400298E20 /* Network */,
 				BD65FBD226F5F03400298E20 /* UseCase */,
 				BD65FBDE26FC502700298E20 /* LifeCycle */,
-				BD65FBDC26FC4FB900298E20 /* Marker.swift */,
+				BD1766522989E95F00A26A8B /* Common */,
 				BD65FB9626F5A19E00298E20 /* Assets.xcassets */,
 				BD65FB9826F5A19E00298E20 /* LaunchScreen.storyboard */,
 				BD65FB9B26F5A19E00298E20 /* Info.plist */,
@@ -205,7 +208,9 @@
 			isa = PBXGroup;
 			children = (
 				BD1766572989EEE200A26A8B /* CenterListView.swift */,
+				BDBF3FC5298B364B009C4C29 /* CenterDetailView.swift */,
 				BD1766592989F3DE00A26A8B /* Cell */,
+				BDBF3FC7298B37F2009C4C29 /* CommonDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 		BD65FBBE26F5A34700298E20 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BD65FBDC26FC4FB900298E20 /* Marker.swift */,
 				BD65FBC726F5CA2500298E20 /* Center.swift */,
 			);
 			path = Model;
@@ -222,8 +228,8 @@
 			isa = PBXGroup;
 			children = (
 				BD65FB9126F5A19D00298E20 /* CenterListViewController.swift */,
-				BD65FBD626F630DE00298E20 /* DetailViewController.swift */,
-				BD65FBDF26FC507600298E20 /* MapViewController.swift */,
+				BD65FBD626F630DE00298E20 /* CenterDetailViewController.swift */,
+				BD65FBDF26FC507600298E20 /* CenterLocationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -248,8 +254,8 @@
 			isa = PBXGroup;
 			children = (
 				BD65FBD426F5F08B00298E20 /* CenterListViewModel.swift */,
-				BD65FBD826F6386800298E20 /* DetailViewModel.swift */,
-				BD65FBDA26FC4F7300298E20 /* MapViewModel.swift */,
+				BD65FBD826F6386800298E20 /* CenterDetailViewModel.swift */,
+				BD65FBDA26FC4F7300298E20 /* CenterLocationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -514,21 +520,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDBF3FC6298B364B009C4C29 /* CenterDetailView.swift in Sources */,
 				BD65FBD126F5ED4900298E20 /* CenterListUseCase.swift in Sources */,
+				BDBF3FC8298B37F2009C4C29 /* CommonDetailView.swift in Sources */,
 				BD65FBD526F5F08B00298E20 /* CenterListViewModel.swift in Sources */,
 				BD65FBC526F5C7F300298E20 /* CenterTableViewCell.swift in Sources */,
 				BD65FB9226F5A19D00298E20 /* CenterListViewController.swift in Sources */,
 				BD65FBCE26F5EA8500298E20 /* CenterListAPI.swift in Sources */,
 				BD65FB8E26F5A19D00298E20 /* AppDelegate.swift in Sources */,
 				BD1766582989EEE200A26A8B /* CenterListView.swift in Sources */,
-				BD65FBD726F630DE00298E20 /* DetailViewController.swift in Sources */,
+				BD65FBD726F630DE00298E20 /* CenterDetailViewController.swift in Sources */,
 				BD1766562989EAB100A26A8B /* Uitils.swift in Sources */,
 				BD65FBC826F5CA2500298E20 /* Center.swift in Sources */,
 				BD65FBDD26FC4FB900298E20 /* Marker.swift in Sources */,
-				BD65FBD926F6386800298E20 /* DetailViewModel.swift in Sources */,
+				BD65FBD926F6386800298E20 /* CenterDetailViewModel.swift in Sources */,
 				BD65FB9026F5A19D00298E20 /* SceneDelegate.swift in Sources */,
-				BD65FBDB26FC4F7300298E20 /* MapViewModel.swift in Sources */,
-				BD65FBE026FC507600298E20 /* MapViewController.swift in Sources */,
+				BD65FBDB26FC4F7300298E20 /* CenterLocationViewModel.swift in Sources */,
+				BD65FBE026FC507600298E20 /* CenterLocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

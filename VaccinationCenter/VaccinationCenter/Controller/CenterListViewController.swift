@@ -20,12 +20,7 @@ final class CenterListViewController: UIViewController {
         configureInitialSetting()
         bind()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-    
+
     //MARK: - Method
     private func bind() {
         // Action -> Input
@@ -88,7 +83,7 @@ extension CenterListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailViewController = DetailViewController()
+        let detailViewController = CenterDetailViewController()
         let center = datasource[indexPath.row]
         detailViewController.viewModel.configureDetail(center: center)
         detailViewController.navigationItem.title = center.centerName
