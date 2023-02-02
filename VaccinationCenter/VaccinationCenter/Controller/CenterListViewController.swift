@@ -84,8 +84,10 @@ extension CenterListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailViewController = CenterDetailViewController()
+        
         let center = datasource[indexPath.row]
-        detailViewController.viewModel.configureDetail(center: center)
+        detailViewController.viewModel.input.onLoad.onNext(center)
+        
         detailViewController.navigationItem.title = center.centerName
         self.navigationController?.pushViewController(detailViewController, animated: true)
     }

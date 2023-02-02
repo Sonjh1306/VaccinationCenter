@@ -43,18 +43,18 @@ class CenterDetailView: UIView {
         super.init(coder: coder)
     }
     
-    convenience init(centerContent: String,
-                     facilityContent: String,
-                     phoneContent: String,
-                     updateAtContent: String,
-                     addressContent: String) {
-        self.init()
-        self.centerView.contentLabel.text = centerContent
-        self.facilityView.contentLabel.text = facilityContent
-        self.phoneView.contentLabel.text = phoneContent
-        self.updateAtView.contentLabel.text = updateAtContent
-        self.addressView.contentLabel.text = addressContent
-    }
+//    convenience init(centerContent: String,
+//                     facilityContent: String,
+//                     phoneContent: String,
+//                     updateAtContent: String,
+//                     addressContent: String) {
+//        self.init()
+//        self.centerView.contentLabel.text = centerContent
+//        self.facilityView.contentLabel.text = facilityContent
+//        self.phoneView.contentLabel.text = phoneContent
+//        self.updateAtView.contentLabel.text = updateAtContent
+//        self.addressView.contentLabel.text = addressContent
+//    }
     
     private func setAddsubviews() {
         self.addSubview(centerView)
@@ -98,6 +98,14 @@ class CenterDetailView: UIView {
             $0.height.equalTo(150)
         }
        
+    }
+    
+    func configureData(center: String, facility: String, phone: String, update: String, address: String) {
+        self.centerView.contentLabel.text = center
+        self.facilityView.contentLabel.text = facility
+        self.phoneView.contentLabel.text = phone
+        self.updateAtView.contentLabel.text = update
+        self.addressView.contentLabel.text = address
     }
     
 }

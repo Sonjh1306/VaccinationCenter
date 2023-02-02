@@ -1,63 +1,36 @@
 import Foundation
+import RxSwift
+import RxCocoa
 
-class CenterDetailViewModel {
+class CenterDetailViewModel: ViewModelType {
     
-    private var detail: CenterDetail?
+    struct Input {
+        let onLoad = PublishSubject<Center>()
+    }
+    
+    struct Output {
+        let centerDetailData = ReplaySubject<CenterDetail>.create(bufferSize: 1)
+    }
+    
+    var input: Input = Input()
+    var output: Output = Output()
+    
+    var disposeBag: DisposeBag = DisposeBag()
     
     init() {
-        self.detail = nil
+        input.onLoad
+            .bind { [weak self] (center) in
+                print("2")
+                let centerDetail = CenterDetail(centerName: center.centerName,
+                                                facilityName: center.facilityName,
+                                                phoneNumber: center.phoneNumber,
+                                                updatedAt: center.updatedAt,
+                                                address: center.address,
+                                                lat: center.lat,
+                                                lng: center.lng)
+                
+                self?.output.centerDetailData.onNext(centerDetail)
+            }.disposed(by: disposeBag)
     }
-    
-    func configureDetail(center: Center) {
-        self.detail = CenterDetail(id: center.id, centerName: center.centerName, facilityName: center.facilityName, phoneNumber: center.phoneNumber, updatedAt: center.updatedAt, address: center.address, lat: center.lat, lng: center.lng)
-    }
-    
-    func detailCenterName() -> String {
-        guard let detail = detail else {
-            return ""
-        }
-        return detail.centerName
-    }
-    
-    func detailFacilityName() -> String {
-        guard let detail = detail else {
-            return ""
-        }
-        return detail.facilityName
-    }
-    
-    func detailPhoneNumber() -> String {
-        guard let detail = detail else {
-            return ""
-        }
-        return detail.phoneNumber
-    }
-    
-    func detailUpdatedAt() -> String {
-        guard let detail = detail else {
-            return ""
-        }
-        return detail.updatedAt
-    }
-    
-    func detailAddress() -> String {
-        guard let detail = detail else {
-            return ""
-        }
-        return detail.address
-    }
-    
-    func detailLat() -> String {
-        guard let detail = detail else {
-            return ""
-        }
-        return detail.lat
-    }
-    
-    func detailLng() -> String {
-        guard let detail = detail else {
-            return ""
-        }
-        return detail.lng
-    }
+
 }
