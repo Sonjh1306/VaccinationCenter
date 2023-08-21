@@ -30,6 +30,8 @@
 		BD65FBDB26FC4F7300298E20 /* CenterLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBDA26FC4F7300298E20 /* CenterLocationViewModel.swift */; };
 		BD65FBDD26FC4FB900298E20 /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBDC26FC4FB900298E20 /* Marker.swift */; };
 		BD65FBE026FC507600298E20 /* CenterLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBDF26FC507600298E20 /* CenterLocationViewController.swift */; };
+		BDA3AD8E2A9328BE00A95D5A /* SecretKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDA3AD8D2A9328BE00A95D5A /* SecretKey.plist */; };
+		BDA3AD912A9329DF00A95D5A /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3AD902A9329DF00A95D5A /* Bundle+Extension.swift */; };
 		BDBF3FC6298B364B009C4C29 /* CenterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF3FC5298B364B009C4C29 /* CenterDetailView.swift */; };
 		BDBF3FC8298B37F2009C4C29 /* CommonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF3FC7298B37F2009C4C29 /* CommonDetailView.swift */; };
 /* End PBXBuildFile section */
@@ -84,6 +86,8 @@
 		BD65FBDA26FC4F7300298E20 /* CenterLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterLocationViewModel.swift; sourceTree = "<group>"; };
 		BD65FBDC26FC4FB900298E20 /* Marker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
 		BD65FBDF26FC507600298E20 /* CenterLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterLocationViewController.swift; sourceTree = "<group>"; };
+		BDA3AD8D2A9328BE00A95D5A /* SecretKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SecretKey.plist; sourceTree = "<group>"; };
+		BDA3AD902A9329DF00A95D5A /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		BDBF3FC5298B364B009C4C29 /* CenterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterDetailView.swift; sourceTree = "<group>"; };
 		BDBF3FC7298B37F2009C4C29 /* CommonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonDetailView.swift; sourceTree = "<group>"; };
 		CB0454FEA769C82B8B149BB9 /* Pods-VaccinationCenterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccinationCenterTests.release.xcconfig"; path = "Target Support Files/Pods-VaccinationCenterTests/Pods-VaccinationCenterTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 		BD1766522989E95F00A26A8B /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BDA3AD8F2A9329BA00A95D5A /* Extension */,
 				BD1766552989EAB100A26A8B /* Uitils.swift */,
 			);
 			path = Common;
@@ -149,6 +154,7 @@
 		BD65FB8126F5A19D00298E20 = {
 			isa = PBXGroup;
 			children = (
+				BDA3AD8D2A9328BE00A95D5A /* SecretKey.plist */,
 				BD65FB8C26F5A19D00298E20 /* VaccinationCenter */,
 				BD65FBA326F5A19E00298E20 /* VaccinationCenterTests */,
 				BD65FBAE26F5A19E00298E20 /* VaccinationCenterUITests */,
@@ -171,6 +177,9 @@
 		BD65FB8C26F5A19D00298E20 /* VaccinationCenter */ = {
 			isa = PBXGroup;
 			children = (
+				BDA3AD8C2A9325C500A95D5A /* Presentation */,
+				BDA3AD8B2A9325C200A95D5A /* Data */,
+				BDA3AD8A2A9325BC00A95D5A /* Domain */,
 				BD65FBBF26F5A34C00298E20 /* Controller */,
 				BD65FBD326F5F07D00298E20 /* ViewModel */,
 				BD65FBBE26F5A34700298E20 /* Model */,
@@ -267,6 +276,35 @@
 				BD65FB8F26F5A19D00298E20 /* SceneDelegate.swift */,
 			);
 			path = LifeCycle;
+			sourceTree = "<group>";
+		};
+		BDA3AD8A2A9325BC00A95D5A /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		BDA3AD8B2A9325C200A95D5A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		BDA3AD8C2A9325C500A95D5A /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		BDA3AD8F2A9329BA00A95D5A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BDA3AD902A9329DF00A95D5A /* Bundle+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		DCE909F3E558C94F9AC4EC9D /* Pods */ = {
@@ -390,6 +428,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDA3AD8E2A9328BE00A95D5A /* SecretKey.plist in Resources */,
 				BD65FBC626F5C7F300298E20 /* CenterTableViewCell.xib in Resources */,
 				BD65FB9A26F5A19E00298E20 /* LaunchScreen.storyboard in Resources */,
 				BD65FB9726F5A19E00298E20 /* Assets.xcassets in Resources */,
@@ -521,6 +560,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDBF3FC6298B364B009C4C29 /* CenterDetailView.swift in Sources */,
+				BDA3AD912A9329DF00A95D5A /* Bundle+Extension.swift in Sources */,
 				BD65FBD126F5ED4900298E20 /* CenterListUseCase.swift in Sources */,
 				BDBF3FC8298B37F2009C4C29 /* CommonDetailView.swift in Sources */,
 				BD65FBD526F5F08B00298E20 /* CenterListViewModel.swift in Sources */,
