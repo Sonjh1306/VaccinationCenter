@@ -8,7 +8,7 @@
 import Foundation
 
 extension Bundle {
-    private var apiKey: String {
+    var apiKey: String {
         get {
             guard let filePath = Bundle.main.path(forResource: "SecretKey", ofType: "plist") else {
                 fatalError("Couldn't find file 'SecretKey.plist'.")

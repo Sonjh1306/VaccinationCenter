@@ -12,6 +12,12 @@
 		8C09DF7C65F0949956435FC2 /* Pods_VaccinationCenter_VaccinationCenterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D966E867630976ADB61ED37D /* Pods_VaccinationCenter_VaccinationCenterUITests.framework */; };
 		BD1766562989EAB100A26A8B /* Uitils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1766552989EAB100A26A8B /* Uitils.swift */; };
 		BD1766582989EEE200A26A8B /* CenterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1766572989EEE200A26A8B /* CenterListView.swift */; };
+		BD4D74EC2A94877700C701EA /* NetworkLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4D74EB2A94877700C701EA /* NetworkLoggerPlugin.swift */; };
+		BD4D74EE2A9487C800C701EA /* NetworkWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4D74ED2A9487C800C701EA /* NetworkWrapper.swift */; };
+		BD4D74F02A94881A00C701EA /* DefaultCenterListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4D74EF2A94881A00C701EA /* DefaultCenterListRepository.swift */; };
+		BD4D74F22A9488FA00C701EA /* CenterListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4D74F12A9488FA00C701EA /* CenterListDTO.swift */; };
+		BD4D74F42A948DF800C701EA /* CenterListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4D74F32A948DF800C701EA /* CenterListRepository.swift */; };
+		BD4D74F72A94900A00C701EA /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4D74F62A94900A00C701EA /* ViewModelType.swift */; };
 		BD65FB8E26F5A19D00298E20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FB8D26F5A19D00298E20 /* AppDelegate.swift */; };
 		BD65FB9026F5A19D00298E20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FB8F26F5A19D00298E20 /* SceneDelegate.swift */; };
 		BD65FB9226F5A19D00298E20 /* CenterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FB9126F5A19D00298E20 /* CenterListViewController.swift */; };
@@ -19,10 +25,8 @@
 		BD65FB9A26F5A19E00298E20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD65FB9826F5A19E00298E20 /* LaunchScreen.storyboard */; };
 		BD65FBA526F5A19E00298E20 /* VaccinationCenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBA426F5A19E00298E20 /* VaccinationCenterTests.swift */; };
 		BD65FBB026F5A19E00298E20 /* VaccinationCenterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBAF26F5A19E00298E20 /* VaccinationCenterUITests.swift */; };
-		BD65FBC526F5C7F300298E20 /* CenterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBC326F5C7F300298E20 /* CenterTableViewCell.swift */; };
-		BD65FBC626F5C7F300298E20 /* CenterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD65FBC426F5C7F300298E20 /* CenterTableViewCell.xib */; };
 		BD65FBC826F5CA2500298E20 /* Center.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBC726F5CA2500298E20 /* Center.swift */; };
-		BD65FBCE26F5EA8500298E20 /* CenterListAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBCD26F5EA8500298E20 /* CenterListAPI.swift */; };
+		BD65FBCE26F5EA8500298E20 /* CenterListTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBCD26F5EA8500298E20 /* CenterListTargetType.swift */; };
 		BD65FBD126F5ED4900298E20 /* CenterListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBD026F5ED4900298E20 /* CenterListUseCase.swift */; };
 		BD65FBD526F5F08B00298E20 /* CenterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBD426F5F08B00298E20 /* CenterListViewModel.swift */; };
 		BD65FBD726F630DE00298E20 /* CenterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBD626F630DE00298E20 /* CenterDetailViewController.swift */; };
@@ -32,6 +36,11 @@
 		BD65FBE026FC507600298E20 /* CenterLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBDF26FC507600298E20 /* CenterLocationViewController.swift */; };
 		BDA3AD8E2A9328BE00A95D5A /* SecretKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDA3AD8D2A9328BE00A95D5A /* SecretKey.plist */; };
 		BDA3AD912A9329DF00A95D5A /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3AD902A9329DF00A95D5A /* Bundle+Extension.swift */; };
+		BDA3AD932A932EB000A95D5A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3AD922A932EB000A95D5A /* Constants.swift */; };
+		BDA3AD9D2A933EF800A95D5A /* CenterListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3AD9C2A933EF800A95D5A /* CenterListTableViewCell.swift */; };
+		BDA3ADA02A933FF900A95D5A /* BaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3AD9F2A933FF900A95D5A /* BaseLabel.swift */; };
+		BDA3ADA22A93523300A95D5A /* BaseHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3ADA12A93523300A95D5A /* BaseHeaderView.swift */; };
+		BDA3ADA42A935BD800A95D5A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3ADA32A935BD800A95D5A /* BaseViewController.swift */; };
 		BDBF3FC6298B364B009C4C29 /* CenterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF3FC5298B364B009C4C29 /* CenterDetailView.swift */; };
 		BDBF3FC8298B37F2009C4C29 /* CommonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF3FC7298B37F2009C4C29 /* CommonDetailView.swift */; };
 /* End PBXBuildFile section */
@@ -62,6 +71,12 @@
 		BC46646E31C02C1D7A1D6A88 /* Pods-VaccinationCenterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccinationCenterTests.debug.xcconfig"; path = "Target Support Files/Pods-VaccinationCenterTests/Pods-VaccinationCenterTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BD1766552989EAB100A26A8B /* Uitils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uitils.swift; sourceTree = "<group>"; };
 		BD1766572989EEE200A26A8B /* CenterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterListView.swift; sourceTree = "<group>"; };
+		BD4D74EB2A94877700C701EA /* NetworkLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoggerPlugin.swift; sourceTree = "<group>"; };
+		BD4D74ED2A9487C800C701EA /* NetworkWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkWrapper.swift; sourceTree = "<group>"; };
+		BD4D74EF2A94881A00C701EA /* DefaultCenterListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCenterListRepository.swift; sourceTree = "<group>"; };
+		BD4D74F12A9488FA00C701EA /* CenterListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterListDTO.swift; sourceTree = "<group>"; };
+		BD4D74F32A948DF800C701EA /* CenterListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterListRepository.swift; sourceTree = "<group>"; };
+		BD4D74F62A94900A00C701EA /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		BD65FB8A26F5A19D00298E20 /* VaccinationCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VaccinationCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD65FB8D26F5A19D00298E20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD65FB8F26F5A19D00298E20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,10 +90,8 @@
 		BD65FBAB26F5A19E00298E20 /* VaccinationCenterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VaccinationCenterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD65FBAF26F5A19E00298E20 /* VaccinationCenterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccinationCenterUITests.swift; sourceTree = "<group>"; };
 		BD65FBB126F5A19E00298E20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BD65FBC326F5C7F300298E20 /* CenterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterTableViewCell.swift; sourceTree = "<group>"; };
-		BD65FBC426F5C7F300298E20 /* CenterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CenterTableViewCell.xib; sourceTree = "<group>"; };
 		BD65FBC726F5CA2500298E20 /* Center.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Center.swift; sourceTree = "<group>"; };
-		BD65FBCD26F5EA8500298E20 /* CenterListAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterListAPI.swift; sourceTree = "<group>"; };
+		BD65FBCD26F5EA8500298E20 /* CenterListTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterListTargetType.swift; sourceTree = "<group>"; };
 		BD65FBD026F5ED4900298E20 /* CenterListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterListUseCase.swift; sourceTree = "<group>"; };
 		BD65FBD426F5F08B00298E20 /* CenterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterListViewModel.swift; sourceTree = "<group>"; };
 		BD65FBD626F630DE00298E20 /* CenterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterDetailViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +101,11 @@
 		BD65FBDF26FC507600298E20 /* CenterLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterLocationViewController.swift; sourceTree = "<group>"; };
 		BDA3AD8D2A9328BE00A95D5A /* SecretKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SecretKey.plist; sourceTree = "<group>"; };
 		BDA3AD902A9329DF00A95D5A /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		BDA3AD922A932EB000A95D5A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BDA3AD9C2A933EF800A95D5A /* CenterListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterListTableViewCell.swift; sourceTree = "<group>"; };
+		BDA3AD9F2A933FF900A95D5A /* BaseLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLabel.swift; sourceTree = "<group>"; };
+		BDA3ADA12A93523300A95D5A /* BaseHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseHeaderView.swift; sourceTree = "<group>"; };
+		BDA3ADA32A935BD800A95D5A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BDBF3FC5298B364B009C4C29 /* CenterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterDetailView.swift; sourceTree = "<group>"; };
 		BDBF3FC7298B37F2009C4C29 /* CommonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonDetailView.swift; sourceTree = "<group>"; };
 		CB0454FEA769C82B8B149BB9 /* Pods-VaccinationCenterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccinationCenterTests.release.xcconfig"; path = "Target Support Files/Pods-VaccinationCenterTests/Pods-VaccinationCenterTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,8 +154,10 @@
 		BD1766522989E95F00A26A8B /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BDA3AD9E2A933FE600A95D5A /* UIComponent */,
 				BDA3AD8F2A9329BA00A95D5A /* Extension */,
 				BD1766552989EAB100A26A8B /* Uitils.swift */,
+				BDA3AD922A932EB000A95D5A /* Constants.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -145,16 +165,22 @@
 		BD1766592989F3DE00A26A8B /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				BD65FBC326F5C7F300298E20 /* CenterTableViewCell.swift */,
-				BD65FBC426F5C7F300298E20 /* CenterTableViewCell.xib */,
+				BDA3AD9C2A933EF800A95D5A /* CenterListTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		BD4D74F52A948FFC00C701EA /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				BD4D74F62A94900A00C701EA /* ViewModelType.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		BD65FB8126F5A19D00298E20 = {
 			isa = PBXGroup;
 			children = (
-				BDA3AD8D2A9328BE00A95D5A /* SecretKey.plist */,
 				BD65FB8C26F5A19D00298E20 /* VaccinationCenter */,
 				BD65FBA326F5A19E00298E20 /* VaccinationCenterTests */,
 				BD65FBAE26F5A19E00298E20 /* VaccinationCenterUITests */,
@@ -177,20 +203,12 @@
 		BD65FB8C26F5A19D00298E20 /* VaccinationCenter */ = {
 			isa = PBXGroup;
 			children = (
+				BDA3AD8A2A9325BC00A95D5A /* Domain */,
 				BDA3AD8C2A9325C500A95D5A /* Presentation */,
 				BDA3AD8B2A9325C200A95D5A /* Data */,
-				BDA3AD8A2A9325BC00A95D5A /* Domain */,
-				BD65FBBF26F5A34C00298E20 /* Controller */,
-				BD65FBD326F5F07D00298E20 /* ViewModel */,
-				BD65FBBE26F5A34700298E20 /* Model */,
-				BD65FBBD26F5A34000298E20 /* View */,
-				BD65FBCF26F5EB0400298E20 /* Network */,
-				BD65FBD226F5F03400298E20 /* UseCase */,
-				BD65FBDE26FC502700298E20 /* LifeCycle */,
+				BDA3AD942A9337EA00A95D5A /* Resources */,
+				BD65FBDE26FC502700298E20 /* Application */,
 				BD1766522989E95F00A26A8B /* Common */,
-				BD65FB9626F5A19E00298E20 /* Assets.xcassets */,
-				BD65FB9826F5A19E00298E20 /* LaunchScreen.storyboard */,
-				BD65FB9B26F5A19E00298E20 /* Info.plist */,
 			);
 			path = VaccinationCenter;
 			sourceTree = "<group>";
@@ -224,15 +242,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		BD65FBBE26F5A34700298E20 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				BD65FBDC26FC4FB900298E20 /* Marker.swift */,
-				BD65FBC726F5CA2500298E20 /* Center.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		BD65FBBF26F5A34C00298E20 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,17 +255,20 @@
 		BD65FBCF26F5EB0400298E20 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				BD65FBCD26F5EA8500298E20 /* CenterListAPI.swift */,
+				BDA3AD9A2A9338AB00A95D5A /* TargetType */,
+				BDA3AD992A9338A500A95D5A /* Plugins */,
+				BDA3AD982A9338A200A95D5A /* Wrapper */,
+				BDA3AD972A93389D00A95D5A /* DataMapping */,
 			);
 			path = Network;
 			sourceTree = "<group>";
 		};
-		BD65FBD226F5F03400298E20 /* UseCase */ = {
+		BD65FBD226F5F03400298E20 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
 				BD65FBD026F5ED4900298E20 /* CenterListUseCase.swift */,
 			);
-			path = UseCase;
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 		BD65FBD326F5F07D00298E20 /* ViewModel */ = {
@@ -269,18 +281,21 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		BD65FBDE26FC502700298E20 /* LifeCycle */ = {
+		BD65FBDE26FC502700298E20 /* Application */ = {
 			isa = PBXGroup;
 			children = (
 				BD65FB8D26F5A19D00298E20 /* AppDelegate.swift */,
 				BD65FB8F26F5A19D00298E20 /* SceneDelegate.swift */,
 			);
-			path = LifeCycle;
+			path = Application;
 			sourceTree = "<group>";
 		};
 		BDA3AD8A2A9325BC00A95D5A /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				BDA3AD952A93383400A95D5A /* Entities */,
+				BD65FBD226F5F03400298E20 /* UseCases */,
+				BDA3AD962A93384600A95D5A /* Interfaces */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -288,6 +303,8 @@
 		BDA3AD8B2A9325C200A95D5A /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				BDA3AD9B2A9338B700A95D5A /* Repositories */,
+				BD65FBCF26F5EB0400298E20 /* Network */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -295,6 +312,10 @@
 		BDA3AD8C2A9325C500A95D5A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				BD4D74F52A948FFC00C701EA /* Protocol */,
+				BD65FBBD26F5A34000298E20 /* View */,
+				BD65FBD326F5F07D00298E20 /* ViewModel */,
+				BD65FBBF26F5A34C00298E20 /* Controller */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -305,6 +326,84 @@
 				BDA3AD902A9329DF00A95D5A /* Bundle+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		BDA3AD942A9337EA00A95D5A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BD65FB9626F5A19E00298E20 /* Assets.xcassets */,
+				BDA3AD8D2A9328BE00A95D5A /* SecretKey.plist */,
+				BD65FB9B26F5A19E00298E20 /* Info.plist */,
+				BD65FB9826F5A19E00298E20 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BDA3AD952A93383400A95D5A /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				BD65FBC726F5CA2500298E20 /* Center.swift */,
+				BD65FBDC26FC4FB900298E20 /* Marker.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		BDA3AD962A93384600A95D5A /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				BD4D74F32A948DF800C701EA /* CenterListRepository.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		BDA3AD972A93389D00A95D5A /* DataMapping */ = {
+			isa = PBXGroup;
+			children = (
+				BD4D74F12A9488FA00C701EA /* CenterListDTO.swift */,
+			);
+			path = DataMapping;
+			sourceTree = "<group>";
+		};
+		BDA3AD982A9338A200A95D5A /* Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				BD4D74ED2A9487C800C701EA /* NetworkWrapper.swift */,
+			);
+			path = Wrapper;
+			sourceTree = "<group>";
+		};
+		BDA3AD992A9338A500A95D5A /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				BD4D74EB2A94877700C701EA /* NetworkLoggerPlugin.swift */,
+			);
+			path = Plugins;
+			sourceTree = "<group>";
+		};
+		BDA3AD9A2A9338AB00A95D5A /* TargetType */ = {
+			isa = PBXGroup;
+			children = (
+				BD65FBCD26F5EA8500298E20 /* CenterListTargetType.swift */,
+			);
+			path = TargetType;
+			sourceTree = "<group>";
+		};
+		BDA3AD9B2A9338B700A95D5A /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				BD4D74EF2A94881A00C701EA /* DefaultCenterListRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		BDA3AD9E2A933FE600A95D5A /* UIComponent */ = {
+			isa = PBXGroup;
+			children = (
+				BDA3AD9F2A933FF900A95D5A /* BaseLabel.swift */,
+				BDA3ADA12A93523300A95D5A /* BaseHeaderView.swift */,
+				BDA3ADA32A935BD800A95D5A /* BaseViewController.swift */,
+			);
+			path = UIComponent;
 			sourceTree = "<group>";
 		};
 		DCE909F3E558C94F9AC4EC9D /* Pods */ = {
@@ -429,7 +528,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDA3AD8E2A9328BE00A95D5A /* SecretKey.plist in Resources */,
-				BD65FBC626F5C7F300298E20 /* CenterTableViewCell.xib in Resources */,
 				BD65FB9A26F5A19E00298E20 /* LaunchScreen.storyboard in Resources */,
 				BD65FB9726F5A19E00298E20 /* Assets.xcassets in Resources */,
 			);
@@ -559,17 +657,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDA3AD9D2A933EF800A95D5A /* CenterListTableViewCell.swift in Sources */,
+				BDA3ADA02A933FF900A95D5A /* BaseLabel.swift in Sources */,
+				BD4D74EC2A94877700C701EA /* NetworkLoggerPlugin.swift in Sources */,
 				BDBF3FC6298B364B009C4C29 /* CenterDetailView.swift in Sources */,
+				BDA3AD932A932EB000A95D5A /* Constants.swift in Sources */,
+				BD4D74F02A94881A00C701EA /* DefaultCenterListRepository.swift in Sources */,
+				BD4D74F42A948DF800C701EA /* CenterListRepository.swift in Sources */,
 				BDA3AD912A9329DF00A95D5A /* Bundle+Extension.swift in Sources */,
+				BDA3ADA22A93523300A95D5A /* BaseHeaderView.swift in Sources */,
 				BD65FBD126F5ED4900298E20 /* CenterListUseCase.swift in Sources */,
 				BDBF3FC8298B37F2009C4C29 /* CommonDetailView.swift in Sources */,
 				BD65FBD526F5F08B00298E20 /* CenterListViewModel.swift in Sources */,
-				BD65FBC526F5C7F300298E20 /* CenterTableViewCell.swift in Sources */,
+				BD4D74EE2A9487C800C701EA /* NetworkWrapper.swift in Sources */,
 				BD65FB9226F5A19D00298E20 /* CenterListViewController.swift in Sources */,
-				BD65FBCE26F5EA8500298E20 /* CenterListAPI.swift in Sources */,
+				BD65FBCE26F5EA8500298E20 /* CenterListTargetType.swift in Sources */,
 				BD65FB8E26F5A19D00298E20 /* AppDelegate.swift in Sources */,
 				BD1766582989EEE200A26A8B /* CenterListView.swift in Sources */,
+				BDA3ADA42A935BD800A95D5A /* BaseViewController.swift in Sources */,
 				BD65FBD726F630DE00298E20 /* CenterDetailViewController.swift in Sources */,
+				BD4D74F22A9488FA00C701EA /* CenterListDTO.swift in Sources */,
+				BD4D74F72A94900A00C701EA /* ViewModelType.swift in Sources */,
 				BD1766562989EAB100A26A8B /* Uitils.swift in Sources */,
 				BD65FBC826F5CA2500298E20 /* Center.swift in Sources */,
 				BD65FBDD26FC4FB900298E20 /* Marker.swift in Sources */,
@@ -747,7 +855,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 99XDN4TU2D;
-				INFOPLIST_FILE = VaccinationCenter/Info.plist;
+				INFOPLIST_FILE = VaccinationCenter/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -767,7 +875,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 99XDN4TU2D;
-				INFOPLIST_FILE = VaccinationCenter/Info.plist;
+				INFOPLIST_FILE = VaccinationCenter/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
