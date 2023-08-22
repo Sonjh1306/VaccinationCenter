@@ -5,17 +5,15 @@ import RxSwift
 class CenterListViewModel: ViewModelType {
     
     struct Input {
-        let onApear = PublishSubject<Void>()
-        let scrollDown = PublishSubject<Int>()
+        let centerListFetchTrigger = PublishSubject<Int>()
     }
     
     struct Output {
-        let centerList = PublishSubject<CenterList>()
+        let centerList = PublishRelay<CenterList>()
     }
     
     var input: Input = Input()
     var output: Output = Output()
-    
     var disposeBag: DisposeBag = DisposeBag()
     
     private let useCase: CenterListUseCase
@@ -23,15 +21,9 @@ class CenterListViewModel: ViewModelType {
     init(useCase: CenterListUseCase) {
         self.useCase = useCase
         
-        input.onApear
-            .flatMap { _ in self.useCase.excuteFetchingCenterlist(perPage: "10") }
-            .bind(to: output.centerList)
-            .disposed(by: disposeBag)
-        
-        input.scrollDown
-            .map{ $0 }
-            .flatMap{ (perPage) in self.useCase.excuteFetchingCenterlist(perPage: String(perPage))}
-            .bind(to: output.centerList)
+        input.centerListFetchTrigger
+            .flatMap { (perPage) in self.useCase.excuteFetchingCenterlist(perPage: String(perPage)) }
+            .bind(to: self.output.centerList)
             .disposed(by: disposeBag)
     }
 

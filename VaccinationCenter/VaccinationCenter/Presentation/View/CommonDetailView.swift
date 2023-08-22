@@ -17,32 +17,41 @@ final class CommonDetailView: UIView {
         case address
     }
     
-    let logoImageView: UIImageView = {
+    private let logoImageView: UIImageView = {
         let imageView = UIImageView()
         return imageView
     }()
     
-    let titleLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 15)
-        label.textColor = .black
-        label.textAlignment = .center
+    private let titleLabel: BaseLabel = {
+        let label = BaseLabel(weight: .bold,
+                              fontSize: 15,
+                              textColor: .black,
+                              nemberOfLine: 1,
+                              textAlignment: .center,
+                              text: "")
         return label
     }()
     
-    let contentLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 12)
-        label.textColor = .black
-        label.textAlignment = .center
-        label.numberOfLines = 0
+    private let contentLabel: UILabel = {
+        let label = BaseLabel(weight: .regular,
+                              fontSize: 12,
+                              textColor: .black,
+                              nemberOfLine: 0,
+                              textAlignment: .center,
+                              text: "")
         return label
     }()
 
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        configureInitialSetting()
+        setUpViews()
+        
+        self.backgroundColor = .white
+        self.layer.masksToBounds = false
+        self.layer.cornerRadius = 5
+        self.layer.shadowRadius = 5
+        self.layer.shadowOpacity = 0.3
     }
     
     required init?(coder: NSCoder) {
@@ -53,41 +62,31 @@ final class CommonDetailView: UIView {
         self.init()
         switch type {
         case .center:
-            self.logoImageView.image = UIImage(named: "hospital")
-            self.titleLabel.text = "센터명"
+            self.logoImageView.image = UIImage(named: Constants.HOSPITAL_IMAGE_NAME)
+            self.titleLabel.text = Constants.CENTER_TITLE
         case .facility:
-            self.logoImageView.image = UIImage(named: "building")
-            self.titleLabel.text = "건물명"
+            self.logoImageView.image = UIImage(named: Constants.BUILDING_IMAGE_NAME)
+            self.titleLabel.text = Constants.BUILDING_TITLE
         case .phone:
-            self.logoImageView.image = UIImage(named: "telephone")
-            self.titleLabel.text = "전화번호"
+            self.logoImageView.image = UIImage(named: Constants.TELEPHONE_IMAGE_NAME)
+            self.titleLabel.text = Constants.TELEPHONE_TITLE
         case .updateAt:
-            self.logoImageView.image = UIImage(named: "chat")
-            self.titleLabel.text = "업데이트 시간"
+            self.logoImageView.image = UIImage(named: Constants.CHAT_IMAGE_NAME)
+            self.titleLabel.text = Constants.UPDATEAT_TITLE
         case .address:
-            self.logoImageView.image = UIImage(named: "placeholder")
-            self.titleLabel.text = "주소"
+            self.logoImageView.image = UIImage(named: Constants.PLACEHOLDER_IMAGE_NAME)
+            self.titleLabel.text = Constants.ADDRESS_TITLE
         }
     }
     
-    private func configureInitialSetting() {
-        self.backgroundColor = .white
-        self.layer.masksToBounds = false
-        self.layer.cornerRadius = 5
-        self.layer.shadowRadius = 5
-        self.layer.shadowOpacity = 0.3
-        
-        configureConstraints()
-    }
-    
-    private func setAddsubviews() {
+    private func addSubviews() {
         self.addSubview(logoImageView)
         self.addSubview(titleLabel)
         self.addSubview(contentLabel)
     }
     
-    private func configureConstraints() {
-        setAddsubviews()
+    private func setUpViews() {
+        addSubviews()
         
         logoImageView.snp.makeConstraints {
             $0.centerX.equalToSuperview()
@@ -104,5 +103,9 @@ final class CommonDetailView: UIView {
             $0.top.equalTo(titleLabel.snp.bottom).offset(20)
             $0.leading.trailing.equalToSuperview().inset(10)
         }
+    }
+    
+    func configureContentLabel(text: String) {
+        self.contentLabel.text = text
     }
 }

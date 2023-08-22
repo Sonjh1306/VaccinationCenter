@@ -10,7 +10,16 @@ final class CenterListViewController: BaseViewController {
     private var datasource = CenterList(list: [])
     
     private let centerListView = CenterListView()
-    private let centerListViewModel = CenterListViewModel(useCase: DefaultCenterListUseCase(centerListRepository: DefaultCenterListRepository(wrapper: .init(plugins: [NetworkLoggerPlugin()]))))
+    private var centerListViewModel: CenterListViewModel
+    
+    init(viewModel: CenterListViewModel) {
+        self.centerListViewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError()
+    }
     
     // MARK: - Override
     override func viewDidLoad() {
@@ -37,23 +46,28 @@ final class CenterListViewController: BaseViewController {
     }
     
     private func bind() {
-        // Action -> Input
-        centerListViewModel.input.onApear.onNext(())
+        centerListViewModel.input.centerListFetchTrigger.onNext(10)
         
-        // Output -> Update
         centerListViewModel.output.centerList
-            .bind(onNext: { [weak self] (list) in
+            .bind { [weak self] (centerList) in
                 guard let self = self else { return }
-                self.datasource = list
-                self.centerListView.centerListTableView.reloadData()
-            })
-            .disposed(by: disposebag)
+                self.datasource = centerList
+                  self.centerListView.centerListTableView.reloadData()
+            }.disposed(by: disposebag)
         
         // Action
         centerListView.topScrollButton.rx.tap
             .bind { [weak self] _ in
-                self?.centerListView.centerListTableView.setContentOffset(.zero, animated: false)
+                guard let self = self else { return }
+                self.centerListView.centerListTableView.setContentOffset(.zero, animated: false)
             }.disposed(by: disposebag)
+        
+        centerListView.centerListTableView.rx.contentOffset
+            .flatMap { (point) in
+                return Observable.just(point == .zero ? true: false)
+            }
+            .bind(to: self.centerListView.topScrollButton.rx.isHidden)
+            .disposed(by: disposebag)
         
     }
     
@@ -85,16 +99,15 @@ extension CenterListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let offsetY = scrollView.contentOffset.y
-        let contentHeight = scrollView.contentSize.height
-        let height = scrollView.frame.height
-        if offsetY > (contentHeight - height) {
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
-                let currentListCount = self.datasource.list.count
-                self.centerListViewModel.input.scrollDown.onNext(currentListCount + 10)
-            })
-            
+        
+        let contentOffsetY = scrollView.contentOffset.y
+        let tableViewContentSize = self.centerListView.centerListTableView.contentSize.height
+        let paginationY = tableViewContentSize * 0.5
+        
+        if contentOffsetY > tableViewContentSize - paginationY {
+            let currentListCount = self.datasource.list.count
+            print(currentListCount)
+            self.centerListViewModel.input.centerListFetchTrigger.onNext(currentListCount + 10)
         }
     }
 }

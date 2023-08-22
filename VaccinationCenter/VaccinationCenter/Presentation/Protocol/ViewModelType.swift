@@ -13,5 +13,5 @@ protocol ViewModelType {
     
     var input: Input { get }
     var output: Output { get }
-    var disposeBag: DisposeBag { get set }
+    var disposeBag: DisposeBag { get set } 
 }

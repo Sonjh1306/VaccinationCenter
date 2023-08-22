@@ -9,6 +9,7 @@ import UIKit
 
 class CenterDetailView: UIView {
     
+    // MARK: - Properties
     private var centerView: CommonDetailView = {
         let centerView = CommonDetailView(type: .center)
         return centerView
@@ -34,16 +35,18 @@ class CenterDetailView: UIView {
         return addressView
     }()
 
+    // MARK: - Override
     override init(frame: CGRect) {
         super.init(frame: frame)
-        configureConstraints()
+        setUpViews()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
 
-    private func setAddsubviews() {
+    // MARK: - Method
+    private func addSubviews() {
         self.addSubview(centerView)
         self.addSubview(facilityView)
         self.addSubview(phoneView)
@@ -51,9 +54,9 @@ class CenterDetailView: UIView {
         self.addSubview(addressView)
     }
     
-    private func configureConstraints() {
+    private func setUpViews() {
 
-        setAddsubviews()
+        addSubviews()
         
         centerView.snp.makeConstraints {
             $0.top.equalToSuperview().inset(30)
@@ -84,15 +87,14 @@ class CenterDetailView: UIView {
             $0.leading.trailing.equalToSuperview().inset(30)
             $0.height.equalTo(150)
         }
-       
     }
     
     func configureData(center: String, facility: String, phone: String, update: String, address: String) {
-        self.centerView.contentLabel.text = center
-        self.facilityView.contentLabel.text = facility
-        self.phoneView.contentLabel.text = phone
-        self.updateAtView.contentLabel.text = update
-        self.addressView.contentLabel.text = address
+        self.centerView.configureContentLabel(text: center)
+        self.facilityView.configureContentLabel(text: facility)
+        self.phoneView.configureContentLabel(text: phone)
+        self.updateAtView.configureContentLabel(text: update)
+        self.addressView.configureContentLabel(text: address)
     }
     
 }

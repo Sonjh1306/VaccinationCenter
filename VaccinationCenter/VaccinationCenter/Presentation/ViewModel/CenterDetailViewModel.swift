@@ -2,7 +2,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class CenterDetailViewModel: ViewModelType {
+class CenterDetailViewModel {
     
     struct Input {
         let onLoad = PublishSubject<Center>()
