@@ -9,6 +9,7 @@ import UIKit
 
 final class CenterListView: UIView {
 
+    // MARK: - Properties
     let headerView: BaseHeaderView = {
         let view = BaseHeaderView()
         view.configureHeaderType(.noButtonTitle,
@@ -39,6 +40,7 @@ final class CenterListView: UIView {
         return button
     }()
 
+    // MARK: - Override
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureConstraints()
@@ -48,6 +50,7 @@ final class CenterListView: UIView {
         super.init(coder: coder)
     }
     
+    // MARK: - Method
     private func setAddsubviews() {
         self.addSubview(headerView)
         self.addSubview(centerListTableView)
