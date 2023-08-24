@@ -1,34 +1,23 @@
 # VaccinationCenter
 ## 공공 데이터 오픈 Api를 활용한 코로나 예방접종센터 정보 및 위치 찾기
 
-### 개발 기간
-- 2021.09.18 ~ 2021.09.23
+### 계층 설명
+- **Domain**: 비지니스 로직을 포함하고 있는 계층
+    - Entity: 비지니스 모델
+    - UseCase: 비지니스 로직, Repository를 통해 전달받은 데이터를 가공 및 조합
+    - Repository(Interface): Repository의 추상화 객체인 프로토콜
+- **Data**: 직접적으로 데이터를 획득하는 계층(서버, 로컬 저장소 등)
+    - Data Mapper: 네트워크 시 데이터를 주고 받을 때 사용하는 Codable한 객체 및 Entity로 Mapping하는 로직
+    - API(Network): 네트워크를 담당하는 객체(Moya)
+    - Repository(implement): 네트워크를 통해 전달받은 데이터를 Domain Entitiy로 Mapping하여 UseCase로 전달
+- **Presentation**: UI와 UI를 제어하기 위한 코드를 포함하는 계층
+    - ViewModel: UseCase로부터 전달받은 Entity를 View로 바인딩 할 수 있도록 가공
+    - View(ViewController): 사용자 Action을 전달하거나 바인딩한 데이터를 View로 표시
+<img width="363" alt="스크린샷 2023-08-24 오전 10 41 04" src="https://github.com/Sonjh1306/DailyAlgorithm/assets/73586326/5f2148f5-7796-489f-9a43-69ef28758faa"> 
 
-### 구성인원 및 기여도
-- iOS 1명(기여도 100%)
-
-
-### 관련 기술
-- RxSwift, RxCocoa, SnapKit, Alamofire, MapKit
-
-
-### App 기능
-1. 공공 데이터 오픈 Api를 통한 예방접종센터 리스트 불러오기
-2. 해당 예방접종센터 Cell 선택 시 자세한 정보 표시하기
-3. 지도 버튼 선택 시 지도 화면으로 이동
-4. 현재위치로 버튼 선택 시 나의 현재 위치 표시
-5. 접종센터로 버튼 선택 시 해당 예방접종센터의 위치 표시
-
-
-### 구현 방향 및 목표
-1. 스토리보드 없이 코드로만 View 구현(SnapKit 라이브러리 사용)
-2. RxSwift를 사용하여 비동기 이벤트 처리
-3. MapKit을 활용한 위치 MarKer 표시
-4. TableView Pagination 구현(스크롤 시 10개씩 추가 데이터 받아오기)
-
-
-### App Architecture
-<img width="1022" alt="스크린샷 2021-09-23 오후 5 16 12" src="https://user-images.githubusercontent.com/73586326/134474957-7a443543-b4c9-4dd2-a0c6-dd87831f85c7.png">
+### 데이터 흐름 및 의존성 
+<img width="597" alt="스크린샷 2023-08-24 오전 10 34 22" src="https://github.com/Sonjh1306/DailyAlgorithm/assets/73586326/7f877338-9781-4383-a56d-4626780bde3a">
+<img width="541" alt="스크린샷 2023-08-24 오전 10 34 29" src="https://github.com/Sonjh1306/DailyAlgorithm/assets/73586326/fa7c8e53-261c-4159-96b3-503769c1269e">
 
 
 ### App ScreenShot
