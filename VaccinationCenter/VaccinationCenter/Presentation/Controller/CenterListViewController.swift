@@ -6,20 +6,13 @@ import Moya
 final class CenterListViewController: BaseViewController {
     
     // MARK: - Properties
+    weak var coordinator: CenterListCoordinator?
+    
     private var disposebag = DisposeBag()
     private var datasource = CenterList(list: [])
     
     private let centerListView = CenterListView()
-    private var centerListViewModel: CenterListViewModel
-    
-    init(viewModel: CenterListViewModel) {
-        self.centerListViewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError()
-    }
+    private var centerListViewModel: CenterListViewModel!
     
     // MARK: - Override
     override func viewDidLoad() {
@@ -33,13 +26,17 @@ final class CenterListViewController: BaseViewController {
     }
     
     //MARK: - Method
+    func configureViewModel(_ viewModel: CenterListViewModel) {
+        self.centerListViewModel = viewModel
+    }
+    
     private func addSubviews() {
         self.view.addSubview(centerListView)
     }
     
     private func setUpViews() {
         addSubviews()
-    
+        
         centerListView.snp.makeConstraints {
             $0.edges.equalTo(view.safeAreaLayoutGuide)
         }
@@ -52,7 +49,7 @@ final class CenterListViewController: BaseViewController {
             .bind { [weak self] (centerList) in
                 guard let self = self else { return }
                 self.datasource = centerList
-                  self.centerListView.centerListTableView.reloadData()
+                self.centerListView.centerListTableView.reloadData()
             }.disposed(by: disposebag)
         
         // Action
@@ -69,6 +66,19 @@ final class CenterListViewController: BaseViewController {
             .bind(to: self.centerListView.topScrollButton.rx.isHidden)
             .disposed(by: disposebag)
         
+        centerListView.centerListTableView.rx.contentOffset
+            .bind { [weak self] (point) in
+                guard let self = self else { return }
+                let contentOffsetY = point.y
+                let tableViewContentSize = self.centerListView.centerListTableView.contentSize.height
+                let paginationY = tableViewContentSize * 0.5
+                
+                if contentOffsetY > tableViewContentSize - paginationY {
+                    let currentListCount = self.datasource.list.count
+                    self.centerListViewModel.input.centerListFetchTrigger.onNext(currentListCount + 10)
+                }
+                
+            }.disposed(by: disposebag)
     }
     
 }
@@ -90,25 +100,12 @@ extension CenterListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailViewController = CenterDetailViewController()
-        
+        let viewModel = CenterDetailViewModel()
         let center = datasource.list[indexPath.row]
-        detailViewController.viewModel.input.onLoad.onNext(center)
+        detailViewController.configureViewModel(viewModel)
         
         detailViewController.navigationItem.title = center.centerName
         self.navigationController?.pushViewController(detailViewController, animated: true)
-    }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
-        let contentOffsetY = scrollView.contentOffset.y
-        let tableViewContentSize = self.centerListView.centerListTableView.contentSize.height
-        let paginationY = tableViewContentSize * 0.5
-        
-        if contentOffsetY > tableViewContentSize - paginationY {
-            let currentListCount = self.datasource.list.count
-            print(currentListCount)
-            self.centerListViewModel.input.centerListFetchTrigger.onNext(currentListCount + 10)
-        }
     }
 }
 

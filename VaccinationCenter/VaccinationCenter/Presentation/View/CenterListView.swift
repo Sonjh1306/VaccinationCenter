@@ -43,7 +43,7 @@ final class CenterListView: UIView {
     // MARK: - Override
     override init(frame: CGRect) {
         super.init(frame: frame)
-        configureConstraints()
+        setUpViews()
     }
     
     required init?(coder: NSCoder) {
@@ -51,15 +51,15 @@ final class CenterListView: UIView {
     }
     
     // MARK: - Method
-    private func setAddsubviews() {
+    private func addSubviews() {
         self.addSubview(headerView)
         self.addSubview(centerListTableView)
         self.addSubview(topScrollButton)
     }
     
-    private func configureConstraints() {
+    private func setUpViews() {
 
-        setAddsubviews()
+        addSubviews()
         
         headerView.snp.makeConstraints {
             $0.top.leading.trailing.equalToSuperview()
