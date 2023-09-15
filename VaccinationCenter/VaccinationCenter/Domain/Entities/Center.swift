@@ -13,3 +13,16 @@ struct Center {
     let lat: String
     let lng: String
 }
+
+struct CenterDetail {
+    let centerName: String
+    let facilityName: String
+    let phoneNumber: String
+    let updatedAt: String
+    let address: String
+}
+
+struct CenterPosition {
+    let lat: String
+    let lng: String
+}

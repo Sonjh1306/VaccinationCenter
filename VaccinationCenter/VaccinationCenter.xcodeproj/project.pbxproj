@@ -34,6 +34,7 @@
 		BD65FBDB26FC4F7300298E20 /* CenterLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBDA26FC4F7300298E20 /* CenterLocationViewModel.swift */; };
 		BD65FBDD26FC4FB900298E20 /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBDC26FC4FB900298E20 /* Marker.swift */; };
 		BD65FBE026FC507600298E20 /* CenterLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FBDF26FC507600298E20 /* CenterLocationViewController.swift */; };
+		BD8072C32AB429DD00662CEB /* CenterDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8072C22AB429DD00662CEB /* CenterDetailUseCase.swift */; };
 		BDA3AD8E2A9328BE00A95D5A /* SecretKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDA3AD8D2A9328BE00A95D5A /* SecretKey.plist */; };
 		BDA3AD912A9329DF00A95D5A /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3AD902A9329DF00A95D5A /* Bundle+Extension.swift */; };
 		BDA3AD932A932EB000A95D5A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3AD922A932EB000A95D5A /* Constants.swift */; };
@@ -43,6 +44,8 @@
 		BDA3ADA42A935BD800A95D5A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3ADA32A935BD800A95D5A /* BaseViewController.swift */; };
 		BDBF3FC6298B364B009C4C29 /* CenterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF3FC5298B364B009C4C29 /* CenterDetailView.swift */; };
 		BDBF3FC8298B37F2009C4C29 /* CommonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF3FC7298B37F2009C4C29 /* CommonDetailView.swift */; };
+		BDF27A3D2A974CA50030542C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF27A3C2A974CA50030542C /* Coordinator.swift */; };
+		BDF27A3F2A974D1E0030542C /* CenterListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF27A3E2A974D1E0030542C /* CenterListCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +102,7 @@
 		BD65FBDA26FC4F7300298E20 /* CenterLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterLocationViewModel.swift; sourceTree = "<group>"; };
 		BD65FBDC26FC4FB900298E20 /* Marker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
 		BD65FBDF26FC507600298E20 /* CenterLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterLocationViewController.swift; sourceTree = "<group>"; };
+		BD8072C22AB429DD00662CEB /* CenterDetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterDetailUseCase.swift; sourceTree = "<group>"; };
 		BDA3AD8D2A9328BE00A95D5A /* SecretKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SecretKey.plist; sourceTree = "<group>"; };
 		BDA3AD902A9329DF00A95D5A /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		BDA3AD922A932EB000A95D5A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -108,6 +112,8 @@
 		BDA3ADA32A935BD800A95D5A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BDBF3FC5298B364B009C4C29 /* CenterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterDetailView.swift; sourceTree = "<group>"; };
 		BDBF3FC7298B37F2009C4C29 /* CommonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonDetailView.swift; sourceTree = "<group>"; };
+		BDF27A3C2A974CA50030542C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		BDF27A3E2A974D1E0030542C /* CenterListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterListCoordinator.swift; sourceTree = "<group>"; };
 		CB0454FEA769C82B8B149BB9 /* Pods-VaccinationCenterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccinationCenterTests.release.xcconfig"; path = "Target Support Files/Pods-VaccinationCenterTests/Pods-VaccinationCenterTests.release.xcconfig"; sourceTree = "<group>"; };
 		D966E867630976ADB61ED37D /* Pods_VaccinationCenter_VaccinationCenterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VaccinationCenter_VaccinationCenterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6F15043D0D4483AC20E1EBA /* Pods-VaccinationCenter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaccinationCenter.release.xcconfig"; path = "Target Support Files/Pods-VaccinationCenter/Pods-VaccinationCenter.release.xcconfig"; sourceTree = "<group>"; };
@@ -267,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				BD65FBD026F5ED4900298E20 /* CenterListUseCase.swift */,
+				BD8072C22AB429DD00662CEB /* CenterDetailUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -274,6 +281,7 @@
 		BD65FBD326F5F07D00298E20 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				BD4D74F52A948FFC00C701EA /* Protocol */,
 				BD65FBD426F5F08B00298E20 /* CenterListViewModel.swift */,
 				BD65FBD826F6386800298E20 /* CenterDetailViewModel.swift */,
 				BD65FBDA26FC4F7300298E20 /* CenterLocationViewModel.swift */,
@@ -312,7 +320,7 @@
 		BDA3AD8C2A9325C500A95D5A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				BD4D74F52A948FFC00C701EA /* Protocol */,
+				BDF27A3B2A974C870030542C /* Coordinator */,
 				BD65FBBD26F5A34000298E20 /* View */,
 				BD65FBD326F5F07D00298E20 /* ViewModel */,
 				BD65FBBF26F5A34C00298E20 /* Controller */,
@@ -404,6 +412,23 @@
 				BDA3ADA32A935BD800A95D5A /* BaseViewController.swift */,
 			);
 			path = UIComponent;
+			sourceTree = "<group>";
+		};
+		BDF27A3B2A974C870030542C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				BDF27A402A974FD90030542C /* Protocol */,
+				BDF27A3E2A974D1E0030542C /* CenterListCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		BDF27A402A974FD90030542C /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				BDF27A3C2A974CA50030542C /* Coordinator.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		DCE909F3E558C94F9AC4EC9D /* Pods */ = {
@@ -670,13 +695,16 @@
 				BDBF3FC8298B37F2009C4C29 /* CommonDetailView.swift in Sources */,
 				BD65FBD526F5F08B00298E20 /* CenterListViewModel.swift in Sources */,
 				BD4D74EE2A9487C800C701EA /* NetworkWrapper.swift in Sources */,
+				BDF27A3F2A974D1E0030542C /* CenterListCoordinator.swift in Sources */,
 				BD65FB9226F5A19D00298E20 /* CenterListViewController.swift in Sources */,
 				BD65FBCE26F5EA8500298E20 /* CenterListTargetType.swift in Sources */,
 				BD65FB8E26F5A19D00298E20 /* AppDelegate.swift in Sources */,
 				BD1766582989EEE200A26A8B /* CenterListView.swift in Sources */,
 				BDA3ADA42A935BD800A95D5A /* BaseViewController.swift in Sources */,
+				BDF27A3D2A974CA50030542C /* Coordinator.swift in Sources */,
 				BD65FBD726F630DE00298E20 /* CenterDetailViewController.swift in Sources */,
 				BD4D74F22A9488FA00C701EA /* CenterListDTO.swift in Sources */,
+				BD8072C32AB429DD00662CEB /* CenterDetailUseCase.swift in Sources */,
 				BD4D74F72A94900A00C701EA /* ViewModelType.swift in Sources */,
 				BD1766562989EAB100A26A8B /* Uitils.swift in Sources */,
 				BD65FBC826F5CA2500298E20 /* Center.swift in Sources */,
@@ -854,7 +882,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 99XDN4TU2D;
+				DEVELOPMENT_TEAM = 8KRV7X8GQ6;
 				INFOPLIST_FILE = VaccinationCenter/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -874,7 +902,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 99XDN4TU2D;
+				DEVELOPMENT_TEAM = 8KRV7X8GQ6;
 				INFOPLIST_FILE = VaccinationCenter/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

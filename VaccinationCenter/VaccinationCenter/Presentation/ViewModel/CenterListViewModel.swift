@@ -22,7 +22,7 @@ class CenterListViewModel: ViewModelType {
         self.useCase = useCase
         
         input.centerListFetchTrigger
-            .flatMap { (perPage) in self.useCase.excuteFetchingCenterlist(perPage: String(perPage)) }
+            .flatMap { (perPage) in self.useCase.executeFetchingCenterlist(perPage: String(perPage)) }
             .bind(to: self.output.centerList)
             .disposed(by: disposeBag)
     }

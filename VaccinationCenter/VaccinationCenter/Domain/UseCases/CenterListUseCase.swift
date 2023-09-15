@@ -4,7 +4,7 @@ import RxSwift
 import Moya
 
 protocol CenterListUseCase {
-    func excuteFetchingCenterlist(perPage: String) -> Observable<CenterList>
+    func executeFetchingCenterlist(perPage: String) -> Observable<CenterList>
 }
 
 final class DefaultCenterListUseCase: CenterListUseCase {
@@ -15,7 +15,7 @@ final class DefaultCenterListUseCase: CenterListUseCase {
         self.centerListRepository = centerListRepository
     }
 
-    func excuteFetchingCenterlist(perPage: String) -> Observable<CenterList> {
+    func executeFetchingCenterlist(perPage: String) -> Observable<CenterList> {
         return centerListRepository.fetchCenterList(perPage: perPage)
     }
 }

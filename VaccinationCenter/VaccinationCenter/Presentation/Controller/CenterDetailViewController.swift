@@ -3,36 +3,44 @@ import RxSwift
 
 class CenterDetailViewController: BaseViewController {
     
-    let viewModel = CenterDetailViewModel()
-    private lazy var centerDetailView = CenterDetailView()
+    // MARK: - Properties
     private var disposeBag = DisposeBag()
-
+    
+    private var centerDetailView = CenterDetailView()
+    private var centerDetailViewModel: CenterDetailViewModel!
+    
+    //MARK: - Override
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .systemGray
-        rightBarButtonItem()
-        configureConstraints()
+        setUpViews()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-//        bind()
+    //MARK: - Method
+    func configureViewModel(_ viewModel: CenterDetailViewModel) {
+        self.centerDetailViewModel = viewModel
     }
     
-//    func bind() {
-//        // Output -> Update
-//        viewModel.output.centerDetailData
-//            .bind { [weak self] (detailData) in
-//                self?.centerDetailView.configureData(center: detailData.centerName,
-//                                                     facility: detailData.facilityName,
-//                                                     phone: detailData.phoneNumber,
-//                                                     update: detailData.updatedAt,
-//                                                     address: detailData.address)
-//            }.disposed(by: disposeBag)
-//    }
+    private func addSubviews() {
+        self.view.addSubview(centerDetailView)
+    }
+    
+    private func setUpViews() {
+        addSubviews()
+        configureRightBarButtonItem()
+        
+        centerDetailView.snp.makeConstraints {
+            $0.edges.equalTo(view.safeAreaLayoutGuide)
+        }
+    }
+    
+    private func bind() {
+        
+    }
+}
 
-     
-    func rightBarButtonItem() {
+extension CenterDetailViewController {
+    
+    private func configureRightBarButtonItem() {
         let button = UIButton(type: .system)
         button.setTitle("지도", for: .normal)
         button.addTarget(self, action: #selector(touchedRightBarButton), for: .touchUpInside)
@@ -45,15 +53,4 @@ class CenterDetailViewController: BaseViewController {
         self.navigationController?.pushViewController(mapViewController, animated: true)
     }
     
-    private func setAddsubviews() {
-        self.view.addSubview(centerDetailView)
-    }
-    
-    private func configureConstraints() {
-        setAddsubviews()
-        
-        centerDetailView.snp.makeConstraints {
-            $0.edges.equalTo(view.safeAreaLayoutGuide)
-        }
-    }
 }
